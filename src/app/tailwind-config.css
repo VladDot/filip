@@ -1,11 +1,12 @@
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-poppins: "Poppins", sans-serif;
-    --font-mono: var(--font-geist-mono);
+:root {
+    --color-blue: #027dfa;
+}
 
-    /*  */
-    --color-midnight: #121063;
-    --color-tahiti: #3ab7bf;
-    --color-bermuda: #78dcca;
+@theme inline {
+    --font-poppins: "Poppins", sans-serif;
+
+    /*  colors */
+
+    --color-blueBg: var(--color-blue);
+    --color-ellipseBlue: var(--color-blue);
 }
