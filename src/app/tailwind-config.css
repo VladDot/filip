@@ -9,4 +9,7 @@
 
     --color-blueBg: var(--color-blue);
     --color-ellipseBlue: var(--color-blue);
+
+    /* respons */
+    --breakpoint-xxl: 90rem;
 }

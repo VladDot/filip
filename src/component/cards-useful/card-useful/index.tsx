@@ -1,0 +1,26 @@
+import Image from "next/image";
+
+import { Title } from "@/component/title";
+
+import { ICardUseful } from "../mock";
+
+export const CardUseful = ({ text, img, title }: ICardUseful) => {
+    return (
+        <div className="max-w-[335px] m-auto py-5 px-[18px] pb-[30px] flex flex-col gap-y-[30px] border-b border-blueBg/20 md:flex-1 md:min-w-[325px] md:max-w-[325px] md:m-0 xxl:border-r xxl:border-b-0">
+            <div className="flex flex-row-reverse justify-end gap-4 md:flex-col md:gap-y-[30px]">
+                <Title
+                    text={title}
+                    className="text-[clamp(22px,_4vw,_28px)] leading-none h-14 m-0 flex items-end md:items-start "
+                />
+                <div className="min-w-[52px] md:w-[52px]">
+                    <Image
+                        src={img}
+                        alt={text}
+                        className="w-full"
+                    />
+                </div>
+            </div>
+            <p className="leading-[1.4] text-[18px] w-[275px]">{text}</p>
+        </div>
+    );
+};

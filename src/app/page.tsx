@@ -1,7 +1,12 @@
+import { TargetAudience } from "@/component";
+
 export default function Home() {
     return (
-        <h1 className="text-3xl bg-bermuda text- font-bold underline">
-            Hello world!
-        </h1>
+        <div className="p-5 xl:p-[40px] xxl:m-auto">
+            <TargetAudience
+                subtitle="Це саме те, що тобі потрібно "
+                title="Для кого будуть корисні наші курси?"
+            />
+        </div>
     );
 }
