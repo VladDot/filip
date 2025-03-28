@@ -1,5 +1,7 @@
 :root {
     --color-blue: #027dfa;
+    --color-dark: #181818;
+    --color-ellipse: rgba(2, 125, 250, 0.4);
 }
 
 @theme inline {
@@ -8,7 +10,9 @@
     /*  colors */
 
     --color-blueBg: var(--color-blue);
-    --color-ellipseBlue: var(--color-blue);
+    --color-blueBorder: var(--color-ellipse);
+    --color-darkText: var(--color-dark);
+    --color-ellipseBlue: var(--color-ellipse);
 
     /* respons */
     --breakpoint-xxl: 90rem;

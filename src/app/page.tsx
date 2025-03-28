@@ -1,3 +1,4 @@
+import { Button } from "@/component";
 import { TargetAudience } from "@/component";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
                 subtitle="Це саме те, що тобі потрібно "
                 title="Для кого будуть корисні наші курси?"
             />
+            <Button text="Переглянути курси" />
         </div>
     );
 }
