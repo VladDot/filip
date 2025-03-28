@@ -3,8 +3,8 @@ import { StaticImageData } from "next/image";
 
 export interface ICardUseful {
     text: string;
-    img: string | StaticImageData;
     title: string;
+    img: string | StaticImageData;
 }
 
 export const cardsUseful: ICardUseful[] = [

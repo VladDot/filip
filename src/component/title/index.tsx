@@ -7,13 +7,13 @@ interface ITitleProps {
 
 export const Title = ({ text, className }: ITitleProps) => {
     return (
-        <span
+        <h3
             className={cn(
                 "text-[clamp(28px,_4vw,_48px)] w-fit m-auto font-[600] ",
                 className
             )}
         >
             {text}
-        </span>
+        </h3>
     );
 };

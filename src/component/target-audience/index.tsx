@@ -1,6 +1,7 @@
 import { Title } from "../title";
+import { cardsUseful } from "./mock";
 import { SubTitle } from "../sub-title";
-import { CardsUseful } from "../cards-useful";
+import { CardsUseful } from "./cards-useful";
 
 interface ITargetAudienceProps {
     title: string;
@@ -9,8 +10,8 @@ interface ITargetAudienceProps {
 
 export const TargetAudience = ({ title, subtitle }: ITargetAudienceProps) => {
     return (
-        <div>
-            <div className="flex flex-col max-w-[650px] md:mb-[60px] m-auto text-center mb-[30px]">
+        <div className="w-max-[1320px]">
+            <div className="max-w-[650px] m-auto md:mb-[60px] text-center mb-[30px]">
                 <SubTitle text={subtitle} />
                 <Title
                     text={title}
@@ -18,8 +19,8 @@ export const TargetAudience = ({ title, subtitle }: ITargetAudienceProps) => {
                 />
             </div>
 
-            <div className="xxl:[&>div>div:last-child]:border-r-0 [&>div>div:last-child]:border-b-0 md:[&>div>div:last-child]:border-b xxl:[&>div>div:last-child]:border-b-0">
-                <CardsUseful />
+            <div className="xxl:[&>div>div:last-child]:border-r-0 [&>div>div:last-child]:border-b-0 md:[&>div>div:last-child]:border-b xxl:[&>div>div:last-child]:border-b-0 flex justify-center">
+                <CardsUseful cardsUseful={cardsUseful} />
             </div>
         </div>
     );

@@ -8,7 +8,7 @@
     --font-poppins: "Poppins", sans-serif;
 
     /*  colors */
-
+--color-textBlue: var(--color-blue);
     --color-blueBg: var(--color-blue);
     --color-blueBorder: var(--color-ellipse);
     --color-darkText: var(--color-dark);
