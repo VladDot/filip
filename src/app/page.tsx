@@ -1,4 +1,9 @@
-import { Button, CareerDevelopment, TargetAudience } from "@/component";
+import {
+    Button,
+    CareerDevelopment,
+    LearningProcess,
+    TargetAudience,
+} from "@/component";
 
 export default function Home() {
     return (
@@ -7,6 +12,7 @@ export default function Home() {
                 subtitle="Це саме те, що тобі потрібно "
                 title="Для кого будуть корисні наші курси?"
             />
+            <LearningProcess />
             <CareerDevelopment
                 subtitle="Це саме те, що тобі потрібно "
                 title="Як виглядає процес навчання?"

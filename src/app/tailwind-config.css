@@ -10,7 +10,7 @@
     /*  colors */
 --color-textBlue: var(--color-blue);
     --color-blueBg: var(--color-blue);
-    --color-blueBorder: var(--color-ellipse);
+    --color-blueBorder: var(--color-blue);
     --color-darkText: var(--color-dark);
     --color-ellipseBlue: var(--color-ellipse);
 
