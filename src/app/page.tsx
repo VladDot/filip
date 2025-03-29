@@ -1,8 +1,9 @@
 import {
     Button,
-    CareerDevelopment,
-    LearningProcess,
+    AuthorSupport,
     TargetAudience,
+    LearningProcess,
+    CareerDevelopment,
 } from "@/component";
 
 export default function Home() {
@@ -16,6 +17,10 @@ export default function Home() {
             <CareerDevelopment
                 subtitle="Це саме те, що тобі потрібно "
                 title="Як виглядає процес навчання?"
+            />
+            <AuthorSupport
+                subtitle="Ти можеш мені довіритись"
+                title="Чим я можу тобі допомогти?"
             />
             <Button text="Переглянути курси" />
         </div>

@@ -6,3 +6,4 @@ export { default as Stick1 } from "./Stick1.png";
 export { default as Stick2 } from "./Stick2.png";
 export { default as Stick3 } from "./Stick3.png";
 export { default as Stick4 } from "./Stick4.png";
+export { default as Filipp } from "./filipp.png";

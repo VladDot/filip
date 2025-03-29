@@ -8,7 +8,7 @@
     --font-poppins: "Poppins", sans-serif;
 
     /*  colors */
---color-textBlue: var(--color-blue);
+    --color-textBlue: var(--color-blue);
     --color-blueBg: var(--color-blue);
     --color-blueBorder: var(--color-blue);
     --color-darkText: var(--color-dark);
@@ -16,4 +16,25 @@
 
     /* respons */
     --breakpoint-xxl: 90rem;
+
+    /* animate */
+    --animate-swing: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(5deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    70% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
 }
