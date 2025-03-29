@@ -3,18 +3,13 @@ import { cardsUseful } from "./mock";
 import { SubTitle } from "../sub-title";
 import { CardsUseful } from "./cards-useful";
 
-interface ITargetAudienceProps {
-    title: string;
-    subtitle: string;
-}
-
-export const TargetAudience = ({ title, subtitle }: ITargetAudienceProps) => {
+export const TargetAudience = () => {
     return (
         <div className="w-max-[1320px]">
             <div className="max-w-[650px] m-auto md:mb-[60px] text-center mb-[30px]">
-                <SubTitle text={subtitle} />
+                <SubTitle text="Це саме те, що тобі потрібно " />
                 <Title
-                    text={title}
+                    text="Для кого будуть корисні наші курси?"
                     className="leading-[100%]"
                 />
             </div>

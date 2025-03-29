@@ -1,7 +1,9 @@
-export { Title } from "./title";
-export { Button } from "./button";
-export { SubTitle } from "./sub-title";
+export { Accordion } from "./accordion";
 export { AuthorSupport } from "./author-support";
-export { TargetAudience } from "./target-audience";
-export { LearningProcess } from "./learning-process";
+export { Button } from "./button";
 export { CareerDevelopment } from "./career-development";
+export { CourseProgram } from "./course-program";
+export { LearningProcess } from "./learning-process";
+export { SubTitle } from "./sub-title";
+export { TargetAudience } from "./target-audience";
+export { Title } from "./title";

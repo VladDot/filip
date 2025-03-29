@@ -1,23 +1,15 @@
-import { cardCareer } from "./mock";
-import { CardsCareer } from "./cards-career";
-import { SubTitle } from "../sub-title";
 import { Title } from "../title";
+import { cardCareer } from "./mock";
+import { SubTitle } from "../sub-title";
+import { CardsCareer } from "./cards-career";
 
-interface ICareerDevelopmentProps {
-    title: string;
-    subtitle: string;
-}
-
-export const CareerDevelopment = ({
-    subtitle,
-    title,
-}: ICareerDevelopmentProps) => {
+export const CareerDevelopment = () => {
     return (
         <div className="">
             <div className=" max-w-[650px] md:mb-[60px] m-auto text-center mb-[30px] ">
-                <SubTitle text={subtitle} />
+                <SubTitle text="Це саме те, що тобі потрібно " />
                 <Title
-                    text={title}
+                    text="Як виглядає процес навчання?"
                     className="leading-[100%]"
                 />
             </div>
