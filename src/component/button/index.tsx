@@ -9,17 +9,24 @@ interface IButtonProps {
     text: string;
     revers?: boolean;
     rotate?: boolean;
+    bluesTheme?: boolean;
+    className?: string;
 }
 
 export const Button = ({
     text,
+    className,
     revers = false,
     rotate = false,
 }: IButtonProps) => {
-    const styles = getStyle({ revers, rotate });
+    const styles = getStyle({ revers, rotate, className });
 
     const handleSubmit = () => {
-        console.log("submit");
+        console.log({
+            click: "submit",
+            maxW: "change",
+            forText: "[&_p_span]:",
+        });
     };
     return (
         <button
