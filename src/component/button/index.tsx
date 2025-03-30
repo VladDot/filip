@@ -9,7 +9,6 @@ interface IButtonProps {
     text: string;
     revers?: boolean;
     rotate?: boolean;
-    bluesTheme?: boolean;
     className?: string;
 }
 

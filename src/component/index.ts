@@ -3,6 +3,7 @@ export { AuthorSupport } from "./author-support";
 export { Button } from "./button";
 export { CareerDevelopment } from "./career-development";
 export { CourseProgram } from "./course-program";
+export { LearningOptions } from "./learning-options";
 export { LearningProcess } from "./learning-process";
 export { SubTitle } from "./sub-title";
 export { TargetAudience } from "./target-audience";
