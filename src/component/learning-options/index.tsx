@@ -1,7 +1,7 @@
-import { SubTitle } from "../sub-title";
 import { Title } from "../title";
-import { CardOptions } from "./card-options";
+import { SubTitle } from "../sub-title";
 import { mockCards } from "./mock-config";
+import { CardOptions } from "./card-options";
 
 export const LearningOptions = ({}) => {
     return (

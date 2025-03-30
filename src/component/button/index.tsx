@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import { ArrowRight } from "@/app/assets/icon";
+
 import { getStyle } from "./style";
 
 interface IButtonProps {
