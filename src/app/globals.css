@@ -6,3 +6,55 @@
 body {
     @apply font-poppins;
 }
+
+.nav-toggle {
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.nav-toggle:focus {
+    outline-width: 0;
+}
+
+.nav-toggle [class*="bar-"] {
+    background: #027dfa;
+    display: block;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.33s ease all;
+    transition: 0.33s ease all;
+
+    border-radius: 13px;
+    height: 2px;
+    width: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-toggle:hover [class*="bar-"] {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.nav-toggle .bar-bot {
+    margin-bottom: 0;
+}
+
+.opened .bar-top {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 15% 15%;
+    transform-origin: 15% 15%;
+}
+
+.opened .bar-mid {
+    opacity: 0;
+    -webkit-transition: 0.12s ease all;
+    transition: 0.12s ease all;
+}
+
+.opened .bar-bot {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 15% 95%;
+    transform-origin: 15% 95%;
+}
