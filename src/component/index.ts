@@ -11,3 +11,4 @@ export { Social } from "./social";
 export { SubTitle } from "./sub-title";
 export { TargetAudience } from "./target-audience";
 export { Title } from "./title";
+export { Banner } from "./banner";

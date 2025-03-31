@@ -15,7 +15,7 @@ interface IHeaderProps {
 export const Header = ({}: IHeaderProps) => {
     const width = useWindowWidth();
     return (
-        <header className=" z-[2] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed bg-[#FFFFFF/10] backdrop-blur-[4px] lg:backdrop-blur-[24px] ">
+        <header className=" z-[10] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed bg-[#FFFFFF/10] backdrop-blur-[4px] lg:backdrop-blur-[24px] ">
             <div className="flex items-center justify-between gap-8 w-full">
                 {width >= 1024 && (
                     <div className="flex justify-between w-full">

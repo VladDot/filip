@@ -16,7 +16,7 @@ export const Card = ({ decor, text, title }: ISupport) => {
                 </span>
                 {text.map((e, idx) => (
                     <li
-                        className="relative z-10"
+                        className="relative z-1"
                         key={`${e}_${idx}`}
                     >
                         {e}

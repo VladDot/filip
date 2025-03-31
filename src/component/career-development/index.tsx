@@ -13,7 +13,7 @@ export const CareerDevelopment = () => {
                     className="leading-[100%]"
                 />
             </div>
-            <div className="flex justify-center [&>div>div:first-child>h3]:text-black [&>div>div:first-child>div]:bg-white [&>div>div:first-child>div]:text-textBlue">
+            <div className="flex bg-white justify-center [&>div>div:first-child>h3]:text-black [&>div>div:first-child>div]:bg-white [&>div>div:first-child>div]:text-textBlue">
                 <CardsCareer cardCareer={cardCareer} />
             </div>
         </div>
