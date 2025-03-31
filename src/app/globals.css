@@ -7,6 +7,11 @@ body {
     @apply font-poppins;
 }
 
+.cubeBg {
+    background: white;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><rect width='100%' height='100%' fill='none' stroke='rgb(235,245,255)' stroke-width='1'/></svg>");
+}
+
 .nav-toggle {
     position: relative;
     background: transparent;
