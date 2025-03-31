@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Logo, Master, Visa } from "@/app/assets/img";
+import { LogoHorizontal, Master, Visa } from "@/app/assets/img";
 
 import { Social } from "../social";
 
@@ -9,9 +9,9 @@ export const Footer = ({}) => {
     return (
         <section className="w-full px-5 lg:px-[60px] pt-[60px]">
             <div className="flex flex-col mb-[30px] md:flex-row md:justify-between">
-                <div className="w-full max-w-[168px] mb-10 inline-block">
+                <div className="w-full max-w-[168px] lg:max-w-[249px] mb-10 inline-block">
                     <Image
-                        src={Logo}
+                        src={LogoHorizontal}
                         alt="logo"
                         className="w-full"
                     />
@@ -36,13 +36,14 @@ export const Footer = ({}) => {
                     <div className="flex flex-col">
                         <p className="mb-2.5 sm:text-end">Ми в соцмережах</p>
 
-                        <Social className="mb-[60px] sm:mb-14" />
+                        <Social className="mb-[60px] sm:mb-9" />
 
-                        <div className="flex justify-end">
-                            <div>
+                        <div className="flex  sm:mr-2.5 sm:justify-end">
+                            <div className="max-w-[46px] sm:max-w-[72px]">
                                 <Image
                                     src={Visa}
                                     alt="visa_icon"
+                                    className="w-full"
                                 />
                             </div>
 
