@@ -21,6 +21,9 @@
 
     /* animate */
     --animate-swing: swing 3s ease-in-out infinite;
+
+    /* shadow */
+    --shadow-shadowEllipseBlue: 0 0 1000px var(--color-ellipse);
 }
 
 @keyframes swing {

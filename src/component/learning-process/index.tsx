@@ -10,7 +10,7 @@ export const LearningProcess = () => {
                 <SubTitle text="Це саме те, що тобі потрібно" />
                 <Title text="Як виглядає процес навчання?" />
             </div>
-            <div className="flex flex-wrap lg:flex-nowrap gap-y-3 md:gap-y-0 justify-center">
+            <div className="flex flex-wrap lg:flex-nowrap gap-y-3 md:gap-y-0 justify-center bg-white shadow-[0_0_100px_rgba(255,255,255,0.8)]">
                 {cardLess.map((items, idx) => {
                     return (
                         <CardsProcess
