@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 import { Logo } from "@/app/assets/img";
@@ -7,13 +8,13 @@ import { useWindowWidth } from "@/hooks/useWidth";
 
 import { Burger } from "../burger";
 import { Button } from "../button";
+import { FeedbackForm } from "../feedback-form";
 
-interface IHeaderProps {
-    sd?: string;
-}
+export const Header = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-export const Header = ({}: IHeaderProps) => {
     const width = useWindowWidth();
+
     return (
         <header className=" z-[10] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed bg-[#FFFFFF/10] backdrop-blur-[4px] lg:backdrop-blur-[24px] ">
             <div className="flex items-center justify-between gap-8 w-full">
@@ -33,8 +34,13 @@ export const Header = ({}: IHeaderProps) => {
                             <Button
                                 text="Записатися на курс"
                                 className="w-[220px] px-3 "
+                                onClick={() => setIsOpen(true)}
                             />
                         </div>
+                        <FeedbackForm
+                            isOpen={isOpen}
+                            setIsOpen={setIsOpen}
+                        />
                     </div>
                 )}
 
@@ -45,7 +51,11 @@ export const Header = ({}: IHeaderProps) => {
                             alt="logo"
                             className="z-[999]"
                         />
-                        <Burger />
+                        <Burger setIsOpen={() => setIsOpen(true)} />
+                        <FeedbackForm
+                            isOpen={isOpen}
+                            setIsOpen={setIsOpen}
+                        />
                     </div>
                 )}
             </div>

@@ -1,5 +1,6 @@
 export { Accordion } from "./accordion";
 export { AuthorSupport } from "./author-support";
+export { Banner } from "./banner";
 export { Button } from "./button";
 export { CareerDevelopment } from "./career-development";
 export { CourseProgram } from "./course-program";
@@ -7,8 +8,8 @@ export { Footer } from "./footer";
 export { Header } from "./header";
 export { LearningOptions } from "./learning-options";
 export { LearningProcess } from "./learning-process";
+export { Modal } from "./modal";
 export { Social } from "./social";
 export { SubTitle } from "./sub-title";
 export { TargetAudience } from "./target-audience";
 export { Title } from "./title";
-export { Banner } from "./banner";

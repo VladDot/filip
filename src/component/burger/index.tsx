@@ -7,7 +7,11 @@ import { useOutsideClick } from "@/hooks/outSideClick";
 import { getStyles } from "./styles";
 import { Button } from "../button";
 
-export const Burger = () => {
+interface IBurger {
+    setIsOpen: (value: boolean) => void;
+}
+
+export const Burger = ({ setIsOpen }: IBurger) => {
     const ref = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const { burger, nav, navContent } = getStyles({ isActive });
@@ -25,6 +29,11 @@ export const Burger = () => {
             document.body.style.overflow = "";
         };
     }, [isActive]);
+
+    const handleClick = () => {
+        setIsActive(!isActive);
+        setIsOpen(true);
+    };
 
     return (
         <>
@@ -52,6 +61,7 @@ export const Burger = () => {
                         text="Записатися на курс"
                         revers
                         className="sm:bg-blueBg sm:[&>p>span]:text-white"
+                        onClick={handleClick}
                     />
                 </div>
             </nav>
