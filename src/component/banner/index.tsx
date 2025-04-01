@@ -10,14 +10,14 @@ export const Banner = () => {
             <div className="absolute z-[1] blur-[120px] w-[400px] h-[200px] top-[25%] right-[-250px] bg-blueBg rounded-full sm:blur-[150px] sm:w-[500px] sm:h-[150px] sm:top-[30%] lg:w-[700px] lg:h-[300px] lg:blur-[180px] lg:top-[40%] lg:right-[-300px]"></div>
 
             <div className="relative w-full h-full flex justify-center items-center">
-                <div className=" absolute z-[2] rotate-180 top-0 w-full [filter:brightness(0)_invert(1)]">
+                <div className=" absolute z-[2] rotate-180 top-0 w-full [filter:brightness(0)_invert(1)] ">
                     <Image
                         src="/grid4.gif"
                         alt="GIF"
                         width={303}
                         height={300}
                         priority
-                        className="w-full h-[622px] md:h-[808px]"
+                        className="w-full h-[622px] md:h-[808px] object-cover"
                     />
                 </div>
 
