@@ -23,7 +23,8 @@ export const CourseProgram = () => {
         setAccordionIndex(number);
     };
     return (
-        <div className="m-auto flex w-full max-w-[874px] flex-col gap-y-[30px] lg:gap-y-[60px] pb-20 md:pb-24 lg:pb-28 xl:pb-[120px]">
+        <div className="m-auto flex w-full max-w-[874px] flex-col gap-y-[30px] lg:gap-y-[60px] pb-20 md:pb-24 lg:pb-28 xl:pb-[120px] relative z-[5]">
+
             <div className="max-w-[651px] m-auto">
                 <SubTitle
                     text="Дізнайся програму вже зараз "

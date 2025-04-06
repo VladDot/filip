@@ -11,7 +11,7 @@ export const Card = ({ decor, text, title }: ISupport) => {
             />
 
             <ul className="flex flex-col gap-4  md:text-[18px]  ">
-                <span className="absolute text-[220px] z-0 text-textBlue/10 top-0 leading-[50%] right-[-10px] xxl:text-[300px] font-bold font-montserrat">
+                <span className="absolute text-[220px] z-0 text-textBlue/10 top-0 leading-[50%] right-0 xxl:text-[300px] font-bold font-montserrat">
                     {decor}
                 </span>
                 {text.map((e, idx) => (

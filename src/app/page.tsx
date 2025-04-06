@@ -6,6 +6,7 @@ import {
     LearningProcess,
     LearningOptions,
     CareerDevelopment,
+    FooterBanner,
 } from "@/component";
 
 export default function Home() {
@@ -18,7 +19,10 @@ export default function Home() {
                 <CareerDevelopment />
                 <AuthorSupport />
                 <LearningOptions />
-                <CourseProgram />
+                <div className="overflow-hidden"><div className="w-full bg-white "> <CourseProgram /></div>
+               
+                <FooterBanner/></div>
+                
             </div>
         </>
     );

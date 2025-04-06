@@ -7,7 +7,7 @@ import { Social } from "../social";
 
 export const Footer = ({}) => {
     return (
-        <section className="w-full px-5 lg:px-[60px] pt-[60px] max-w-[1440px] mx-auto pb-5">
+        <section className="w-full px-5 lg:px-[60px] pt-[60px] max-w-[1440px] mx-auto pb-5 bg-white relative z-[6]">
             <div className="flex flex-col mb-[30px] md:flex-row md:justify-between">
                 <div className="w-full max-w-[168px] lg:max-w-[249px] mb-10 inline-block">
                     <Image

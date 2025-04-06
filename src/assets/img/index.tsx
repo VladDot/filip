@@ -16,4 +16,3 @@ export { default as Time } from "./time.png";
 export { default as Viber } from "./icon_viber.png";
 export { default as Visa } from "./visa.png";
 export { default as Whatsapp } from "./icon_whatsapp.png";
-export { default as textureBg } from "./textureBg.png";

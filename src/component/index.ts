@@ -1,3 +1,4 @@
+
 export { Accordion } from "./accordion";
 export { AuthorSupport } from "./author-support";
 export { Banner } from "./banner";
@@ -5,6 +6,7 @@ export { Button } from "./button";
 export { CareerDevelopment } from "./career-development";
 export { CourseProgram } from "./course-program";
 export { Footer } from "./footer";
+export { FooterBanner } from "./footer-banner";
 export { Header } from "./header";
 export { LearningOptions } from "./learning-options";
 export { LearningProcess } from "./learning-process";

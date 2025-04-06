@@ -19,7 +19,7 @@ export const Cards = ({ support }: ICardsProps) => {
     return (
         <>
             {width >= 640 && (
-                <div className="flex gap-5 items-center xxl:flex-row  xxl:items-start gap-y-5 w-full xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>ul>span]:-left-30 [&>*:last-child>*:first-child>ul>span]:top-[25%]">
+                <div className="flex gap-5 items-center xxl:flex-row  xxl:items-start gap-y-5 w-full xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>ul>span]:-left-30 [&>*:last-child>*:first-child>ul>span]:top-[25%] ">
                     <div className="flex flex-col gap-y-3 items-center xxl:gap-[158px] xxl:[&>div:last-child]:ml-[111px] ">
                         <Card
                             text={support[0].text}
@@ -85,7 +85,7 @@ export const Cards = ({ support }: ICardsProps) => {
             )}
 
             {width < 640 && (
-                <div className="flex flex-col gap-[30px] w-full [&>*:last-child>*:first-child>ul>span]:left-0 ">
+                <div className="flex flex-col gap-[30px] w-full [&>*:last-child>*:first-child>ul>span]:left-[10px] pt-5 overflow-hidden">
                     {support
                         .filter((_, index) => index === 0)
                         .map(({ title, decor, text }, idx) => (
