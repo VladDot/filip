@@ -5,7 +5,7 @@ import { CardsUseful } from "./cards-useful";
 
 export const TargetAudience = () => {
     return (
-        <div className="w-max-[1320px]">
+        <div className="w-max-[1320px] lg:pb-[160px] bg-white px-5 xl:pl-[60px] xl:pr-12 xxl:m-auto">
             <div className="max-w-[650px] m-auto md:mb-[60px] text-center mb-[30px]">
                 <SubTitle text="Це саме те, що тобі потрібно " />
                 <Title

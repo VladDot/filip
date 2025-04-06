@@ -1,6 +1,5 @@
 import {
     Banner,
-    Header,
     AuthorSupport,
     CourseProgram,
     TargetAudience,
@@ -11,10 +10,9 @@ import {
 
 export default function Home() {
     return (
-        <div>
-            <Header />
+        <>
             <Banner />
-            <div className="px-5 xl:pl-[60px] xl:pr-12 xxl:m-auto pt-[108px] lg:pt-[200px] cubeBg">
+            <div className="cubeBg">
                 <TargetAudience />
                 <LearningProcess />
                 <CareerDevelopment />
@@ -22,6 +20,6 @@ export default function Home() {
                 <LearningOptions />
                 <CourseProgram />
             </div>
-        </div>
+        </>
     );
 }
