@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-
 import { useOutsideClick } from "@/hooks/outSideClick";
 
 import { Input } from "./input";
@@ -19,7 +18,11 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
         lastName: "",
         firstName: "",
     });
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState({
+        email: "",
+        lastName: "",
+        firstName: "",
+    });
     const ref = useRef<HTMLDivElement>(null);
 
     useOutsideClick(() => setIsOpen(false), ref);
@@ -33,56 +36,108 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         setForm({ ...form, [e.target.name]: e.target.value });
+
+        setError((prevError) => ({
+            ...prevError,
+            [e.target.name]: "",
+        }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!validateEmail(form.email)) {
-            setError("Некоректний email");
-            return;
+        const newError = {
+            firstName: form.firstName ? "" : "Це обов'язкове поле",
+            lastName: form.lastName ? "" : "Це обов'язкове поле",
+            email: form.email ? "" : "Це обов'язкове поле",
+        };
+
+        if (form.email && !validateEmail(form.email)) {
+            newError.email = "Некоректний email";
         }
 
-        setError(null);
-        console.log("Form submitted:", form);
+        setError(newError);
+
+        const isValid = Object.values(newError).every((err) => err === "");
+        if (isValid) {
+            setError({ email: "", lastName: "", firstName: "" });
+
+            const formData = {
+                name: form.firstName,
+                surname: form.lastName,
+                email: form.email,
+            };
+
+            fetch("https://nuezowew9l.apigw.corezoid.com/getBotLink", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log("Success:", data);
+                    window.open(data.tg_link, "_blank");
+
+                    setForm({
+                        email: "",
+                        lastName: "",
+                        firstName: "",
+                    });
+
+                    setIsOpen(false);
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
     };
+
     return (
         <Modal
             isOpen={isOpen}
             setClose={() => setIsOpen(false)}
         >
             <div
-                className="space-y-4 p-6 bg-gray-100 rounded-lg shadow max-w-[350px] sm:max-w-[500px]"
                 ref={ref}
+                className="space-y-4 p-6 bg-gray-100 rounded-lg shadow max-w-[350px] sm:max-w-[500px]"
             >
                 <h3 className="text-xl font-medium">
                     Залиште свої дані, щоб наш консультант міг зв’язатися з вами
                 </h3>
                 <form
-                    onSubmit={handleSubmit}
+                    onSubmit={handleFormSubmit}
                     className="flex flex-col gap-y-[10px] "
                 >
                     <Input
                         placeholder="Ваше ім’я"
                         name="firstName"
-                        onChange={handleChange}
                         value={form.firstName}
+                        error={error.firstName}
+                        onChange={handleChange}
                     />
                     <Input
-                        placeholder="Ваше прізвище"
                         name="lastName"
-                        onChange={handleChange}
                         value={form.lastName}
+                        error={error.lastName}
+                        onChange={handleChange}
+                        placeholder="Ваше прізвище"
                     />
                     <Input
-                        placeholder="Введіть свою пошту"
                         name="email"
-                        onChange={handleChange}
-                        value={form.email}
                         type="email"
+                        value={form.email}
+                        error={error.email}
                         className="mb-[30px]"
+                        onChange={handleChange}
+                        placeholder="Введіть свою пошту"
                     />
-                    {error && <p className="text-red-500 text-sm">{error}</p>}{" "}
+                    {Object.values(error).some((err) => err) && (
+                        <p className="text-red-500 text-sm">
+                            Будь ласка, заповніть усі поля
+                        </p>
+                    )}
                     <Button
                         text="Подати заявку"
                         className="max-w-[278px] text-center [&>p]:m-auto"
@@ -92,5 +147,3 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
         </Modal>
     );
 };
-{
-}

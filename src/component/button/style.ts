@@ -7,7 +7,7 @@ interface IStyleProps {
 
 export const getStyle = ({ revers, rotate, className }: IStyleProps) => ({
     btn: cn(
-        "pl-3 py-2 pr-6 bg-blueBg border-blueBorder border-[1px] w-full rounded-xs flex justify-between ease-in-out duration-300 group/item sm:bg-transparent sm:hover:bg-blueBg ",
+        "pl-3 py-2 pr-6 bg-blueBg border-blueBorder border-[1px] w-full rounded-xs flex justify-between ease-in-out duration-300 group/item sm:bg-transparent sm:hover:bg-blueBg cursor-pointer",
         revers && "pl-6 pr-3 flex-row-reverse",
         className
     ),

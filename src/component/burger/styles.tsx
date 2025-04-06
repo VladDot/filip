@@ -1,7 +1,7 @@
 import { cn } from "@/utilities";
 
 export const getStyles = ({ isActive }: { isActive?: boolean }) => ({
-    burger: cn("nav-toggle relative z-[999] ", {
+    burger: cn("nav-toggle relative z-[999] cursor-pointer", {
         opened: isActive,
     }),
     nav: cn(

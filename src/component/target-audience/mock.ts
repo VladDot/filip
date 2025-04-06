@@ -1,4 +1,4 @@
-import { Cubs1, Cubs2, Cubs3, Cubs4 } from "@/app/assets/img";
+import { Cubs1, Cubs2, Cubs3, Cubs4 } from "@/assets/img";
 import { StaticImageData } from "next/image";
 
 export interface ICardUseful {

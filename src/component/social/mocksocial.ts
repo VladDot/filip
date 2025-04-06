@@ -1,20 +1,20 @@
-import { Instagram, Telegram, Viber, Whatsapp } from "@/app/assets/img";
+import { Instagram, Telegram, Viber, Whatsapp } from "@/assets/img";
 
 export const mockIcon = [
     {
-        path: "#",
+        path: "https://t.me/SergeyPC",
         Icon: Telegram,
     },
     {
-        path: "#",
+        path: "viber://chat?number=+380935441781",
         Icon: Viber,
     },
     {
-        path: "#",
+        path: "https://www.instagram.com/serhii.filipp",
         Icon: Instagram,
     },
     {
-        path: "#",
+        path: "https://wa.me/380935441781",
         Icon: Whatsapp,
     },
 ];

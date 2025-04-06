@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Button } from "@/component";
-import { DoneFilled } from "@/app/assets/icon";
+import { DoneFilled } from "@/assets/icon";
 
 interface ICardOptionsProps {
     price: string;

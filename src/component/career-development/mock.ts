@@ -1,4 +1,4 @@
-import { Stick1, Stick2, Stick3, Stick4 } from "@/app/assets/img";
+import { Stick1, Stick2, Stick3, Stick4 } from "@/assets/img";
 import { StaticImageData } from "next/image";
 
 export interface ICardCareer {

@@ -60,7 +60,7 @@ export const Burger = ({ setIsOpen }: IBurger) => {
                     <Button
                         text="Записатися на курс"
                         revers
-                        className="sm:bg-blueBg sm:[&>p>span]:text-white"
+                        className="sm:bg-blueBg sm:[&>p>span]:text-white max-w-[335px]"
                         onClick={handleClick}
                     />
                 </div>

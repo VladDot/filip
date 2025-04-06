@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { LogoHorizontal, Master, Visa } from "@/app/assets/img";
+import { LogoHorizontal, Master, Visa } from "@/assets/img";
 
 import { Social } from "../social";
 
@@ -26,10 +26,12 @@ export const Footer = ({}) => {
                         <p className="text-sm">Пошта</p>
 
                         <Link
-                            href={"#"}
+                            href={"mailto:corezoidtraining@gmail.com"}
                             className="text-textBlue"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            someemailexample@gmail.com
+                            corezoidtraining@gmail.com
                         </Link>
                     </div>
 

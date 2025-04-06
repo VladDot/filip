@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { Time } from "@/app/assets/img";
+import { Time } from "@/assets/img";
 
 import { Title } from "../title";
 import { accordionsData } from "./mock";

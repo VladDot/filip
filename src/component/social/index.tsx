@@ -16,6 +16,8 @@ export const Social = ({ className }: ISocialProps) => {
                     <Link
                         key={`social_icon_${idx}`}
                         href={path}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <Image
                             src={Icon}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Filipp } from "@/app/assets/img";
+import { Filipp } from "@/assets/img";
 import { useWindowWidth } from "@/hooks/useWidth";
 
 import { Card } from "./card";

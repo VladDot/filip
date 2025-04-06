@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { ArrowRight } from "@/app/assets/icon";
+import { ArrowRight } from "@/assets/icon";
 
 import { getStyle } from "./style";
 
