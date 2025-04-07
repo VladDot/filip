@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { Logo } from "@/assets/img";
+import { useWindowWidth } from "@/hooks/useWidth";
 
 import { Burger } from "../burger";
 import { Button } from "../button";
@@ -11,6 +12,8 @@ import { FeedbackForm } from "../feedback-form";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const width = useWindowWidth();
 
     const handleFreeLessonClick = () => {
         const requestData = {
@@ -34,9 +37,10 @@ export const Header = () => {
     };
 
     return (
-        <header className=" z-[999] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed backdrop-blur-[4px]">
+        <header className=" z-[995] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed backdrop-blur-[4px]">
             <div className="absolute top-0 left-0 h-full w-full z-[-1] " />
             <div className="flex items-center justify-between gap-8 w-full relative z-[2] mx-auto max-w-[1440px]">
+            {width > 1024 &&
                 <div className="hidden justify-between w-full min-[1025px]:flex">
                     <Image
                         src={Logo}
@@ -60,28 +64,29 @@ export const Header = () => {
                         </ul>
                         <Button
                             text="Записатися на курс"
-                            className="w-[220px] px-3 "
+                            className="w-[220px] px-3 text-textBlue hover:text-white"
                             onClick={() => setIsOpen(true)}
+                            
                         />
                     </div>
                     <FeedbackForm
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                     />
-                </div>
-
+                </div>}
+                {width < 1025 &&
                 <div className="flex items-center justify-between w-full min-[1025px]:hidden">
                     <Image
                         src={Logo}
                         alt="logo"
                         className="z-[999]"
                     />
-                    <Burger setIsOpen={() => setIsOpen(true)} />
+                    <Burger setIsOpen={() => setIsOpen(true)} onClick={handleFreeLessonClick}/>
                     <FeedbackForm
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                     />
-                </div>
+                </div>}
             </div>
         </header>
     );

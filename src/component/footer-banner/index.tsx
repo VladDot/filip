@@ -1,27 +1,19 @@
-import { Button } from "../button";
-import { SubTitle } from "../sub-title";
 import { Title } from "../title";
+import { Button } from "../button";
+import LazyVideo from "../lazy-video";
+import { SubTitle } from "../sub-title";
 
 export const FooterBanner = () => {
   return (
     <div className="relative h-[450px] w-full md:h-[500px] z-[2] flex justify-center ">
 
             <div className='absolute inset-0 z-[2] bgg mix-blend-plus-lighter '/>
-            
-            {/* Balls */}
-            
-           
 
-          
-
-             {/* top bottom white shadow */}
              <div className='absolute z-[3] w-full h-[10%] bg-white rounded-full blur-[30px] -translate-y-[20%]  top-0 left-0 '/>
 
-
-
         <div className="absolute inset-0 flex justify-center items-center mix-blend-plus-lighter z-[3]">
-            <div className=" absolute z-[2] rotate-180 top-0 w-full ">
-                <video src="/grid.mp4" autoPlay muted loop className="w-full h-[500px] md:h-[500px] object-cover rotate-180" />
+            <div className=" rotate-180 top-0 w-full ">
+            <LazyVideo src="/grid.mp4" className="w-full h-[500px] md:h-[500px] object-cover rotate-180" />
             </div>           
         </div>
 
@@ -38,7 +30,7 @@ export const FooterBanner = () => {
                 />
                 <Button
                     text="Переглянути курси"
-                    className="w-[232px]"
+                    className="w-[232px] text-black"
                     rotate
                 />
             </div>

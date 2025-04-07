@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
-
-import { ArrowRight } from "@/assets/icon";
-
+import { Arrow } from "../arrow";
 import { getStyle } from "./style";
 
 interface IButtonProps {
@@ -23,30 +20,16 @@ export const Button = ({
 }: IButtonProps) => {
     const styles = getStyle({ revers, rotate, className });
 
-    // const handleSubmit = () => {
-    //     console.log({
-    //         click: "submit",
-    //         maxW: "change",
-    //         forText: "[&_p_span]:",
-    //     });
-    // };
     return (
         <button
             onClick={onClick}
             className={styles.btn}
         >
             <div className={styles.arrowContainer}>
-                <Image
-                    src={ArrowRight}
-                    alt="arrow"
-                    className={styles.arrowImg}
-                />
-                <Image
-                    src={ArrowRight}
-                    alt="arrow"
-                    color="red"
-                    className={styles.arrowImg}
-                />
+                <Arrow   
+                    className={styles.arrowImg}/>
+                <Arrow   
+                    className={styles.arrowImg}/>
             </div>
 
             <p className={styles.textContainer}>

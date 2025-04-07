@@ -7,11 +7,13 @@ import { useOutsideClick } from "@/hooks/outSideClick";
 import { getStyles } from "./styles";
 import { Button } from "../button";
 
+
 interface IBurger {
     setIsOpen: (value: boolean) => void;
+    onClick: () => void
 }
 
-export const Burger = ({ setIsOpen }: IBurger) => {
+export const Burger = ({ setIsOpen,onClick }: IBurger) => {
     const ref = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const { burger, nav, navContent } = getStyles({ isActive });
@@ -21,7 +23,7 @@ export const Burger = ({ setIsOpen }: IBurger) => {
     useEffect(() => {
         if (isActive) {
             document.body.style.overflow = "hidden ";
-            document.body.style.paddingRight = "16px"
+            document.body.style.paddingRight = "14px"
         } else {
             document.body.style.overflow = "";
             document.body.style.paddingRight = ""
@@ -55,7 +57,7 @@ export const Burger = ({ setIsOpen }: IBurger) => {
             >
                 <div className={navContent}>
                     <ul className="flex flex-col gap-5 mb-[50px] text-xl">
-                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Безкоштовний відео-урок</li>
+                        <li onClick={onClick} className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Безкоштовний відео-урок</li>
                         <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Про курс</li>
                         <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer"> Контакти</li>
                     </ul>
