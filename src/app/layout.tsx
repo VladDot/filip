@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Chat, Footer, Header } from "@/component";
+import { Footer, Header } from "@/component";
 
 import "./globals.css";
 
@@ -19,8 +19,6 @@ export default function RootLayout({
             <body>
                 <Header />
                 {children}
-                
-                <Chat/>
                 <Footer />
             </body>
         </html>

@@ -40,8 +40,8 @@ export const Footer = ({}) => {
 
                         <Social className="mb-[60px] sm:mb-9" />
 
-                        <div className="flex  sm:mr-2.5 sm:justify-end">
-                            <div className="max-w-[46px] sm:max-w-[72px]">
+                        <div className="flex gap-x-4 sm:mr-2.5 sm:justify-end">
+                            <div className="max-w-[46px] w-full sm:max-w-[72px]">
                                 <Image
                                     src={Visa}
                                     alt="visa_icon"
@@ -49,10 +49,11 @@ export const Footer = ({}) => {
                                 />
                             </div>
 
-                            <div>
+                            <div className="max-w-[46px] w-full sm:max-w-[72px]">
                                 <Image
                                     src={Master}
                                     alt="master_icon"
+                                    className="w-full"
                                 />
                             </div>
                         </div>

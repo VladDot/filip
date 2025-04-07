@@ -64,8 +64,8 @@ export const Header = () => {
                         </ul>
                         <Button
                             text="Записатися на курс"
-                            className="w-[220px] px-3 [&_div_*]:fill-blueBg [&_p_*]:text-textBlue"
                             onClick={() => setIsOpen(true)}
+                            className="w-[220px] px-3 [&_div_*]:fill-blueBg [&_p_*]:text-textBlue"
                             
                         />
                     </div>

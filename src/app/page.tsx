@@ -11,11 +11,8 @@ import {
     FooterBanner,
     Chat,
 } from "@/component";
-import { useWindowWidth } from "@/hooks/useWidth";
 
 export default function Home() {
-
-  const width = useWindowWidth();
 
     return (
         <>
@@ -36,7 +33,7 @@ export default function Home() {
                
                 <FooterBanner/>
 
-                {width >= 640 &&<Chat/>}
+                <Chat/>
                 
             </div>
         </>
