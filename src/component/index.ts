@@ -1,9 +1,9 @@
-
 export { Accordion } from "./accordion";
 export { AuthorSupport } from "./author-support";
 export { Banner } from "./banner";
 export { Button } from "./button";
 export { CareerDevelopment } from "./career-development";
+export { Chat } from "./chats-box";
 export { CourseProgram } from "./course-program";
 export { Footer } from "./footer";
 export { FooterBanner } from "./footer-banner";

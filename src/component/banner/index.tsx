@@ -39,7 +39,7 @@ export const Banner = () => {
                     />
                     <Button
                         text="Переглянути курси"
-                        className="w-[232px] "
+                        className="w-[232px]"
                         rotate
                     />
                 </div>

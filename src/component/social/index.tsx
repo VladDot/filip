@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 
-import { mockIcon } from "./mocksocial";
 import { cn } from "@/utilities";
+import { SVGTelegram, SVGViber,SVGInstagram,SVGWhatsapp } from "./svg-icon";
 
 interface ISocialProps {
     className?: string;
@@ -10,22 +9,35 @@ interface ISocialProps {
 
 export const Social = ({ className }: ISocialProps) => {
     return (
-        <>
             <div className={cn("flex gap-x-[30px]", className)}>
-                {mockIcon.map(({ path, Icon }, idx) => (
                     <Link
-                        key={`social_icon_${idx}`}
-                        href={path}
+                        href="https://t.me/SergeyPC"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image
-                            src={Icon}
-                            alt="social_icon"
-                        />
+                        <SVGTelegram/> 
                     </Link>
-                ))}
+                    <Link
+                        href="viber://chat?number=+380935441781"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <SVGViber/> 
+                    </Link>
+                    <Link
+                        href="https://wa.me/380935441781"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <SVGWhatsapp/> 
+                    </Link>
+                    <Link
+                        href="https://www.instagram.com/serhii.filipp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <SVGInstagram/> 
+                    </Link>
             </div>
-        </>
     );
 };
