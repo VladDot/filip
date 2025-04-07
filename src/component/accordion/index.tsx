@@ -10,7 +10,7 @@ export const Accordion = ({
     const styles = getStyles({ isOpen });
 
     return (
-        <div className="w-full">
+        <div className="w-full bg-white ">
             <div
                 onClick={() => onClick()}
                 className={styles.header}
@@ -32,10 +32,10 @@ export const Accordion = ({
 
             <div
                 className={`${styles.content} ${
-                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 "
                 }`}
             >
-                <ul className="space-y-1 list-disc pl-6 marker:text-textBlue">
+                <ul className="space-y-1 list-disc pl-6 marker:text-textBlue ">
                     {description.map((e, idx) => (
                         <li
                             className="py-1"

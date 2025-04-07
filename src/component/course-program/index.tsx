@@ -23,8 +23,10 @@ export const CourseProgram = () => {
         setAccordionIndex(number);
     };
     return (
-        <div className="m-auto flex w-full max-w-[874px] flex-col gap-y-[30px] lg:gap-y-[60px] pb-20 md:pb-24 lg:pb-28 xl:pb-[120px] relative z-[5]">
+        <div className="m-auto flex w-full max-w-[874px] flex-col gap-y-[30px] lg:gap-y-[60px] pb-20 md:pb-24 lg:pb-28 xl:pb-[120px] relative z-[5] px-4">
+ <div className='absolute w-[90vw] h-[100vw] rounded-full bg-[#027DFA80] blur-[100px] right-0 translate-x-[30%] top-1/5 translate-y-[15%]  lg:blur-[200px]  xxl:blur-[200px] md:rotate-[13deg] md:translate-x-[90%] lg:bottom-[10%] xxl:bottom-0 xxl:translate-x-[95%]'/>
 
+<div className='absolute z-[4] w-[clamp(200px,50vw,1382px)] h-[clamp(200px,50vw,1000px)] rounded-full bg-[#027DFA80] blur-[100px] left-0 top-1/5 -translate-y-[50%] -translate-x-[90%]  md:-translate-y-[30%] lg:blur-[150px] lg:-translate-y-[20%] xxl:-translate-x-[120%] xxl:blur-[150px]  xxl:-translate-y-[60%] '/>
             <div className="max-w-[651px] m-auto">
                 <SubTitle
                     text="Дізнайся програму вже зараз "
@@ -60,7 +62,7 @@ export const CourseProgram = () => {
                 ))}
             </div>
 
-            <div className="bg-blueBg/10 border border-blueBorder/20 p-5 flex flex-col gap-y-5">
+            <div className="bg-blueBg/10 border border-blueBorder/20 p-5 flex flex-col gap-y-5 relative z-[4]">
                 <h3 className="text-[clamp(22px,_4vw,_32px)] font-semibold">
                     Після завершення курсу — ти отримаєш сертифікат
                 </h3>

@@ -20,13 +20,16 @@ export const Burger = ({ setIsOpen }: IBurger) => {
 
     useEffect(() => {
         if (isActive) {
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden ";
+            document.body.style.paddingRight = "16px"
         } else {
             document.body.style.overflow = "";
+            document.body.style.paddingRight = ""
         }
 
         return () => {
             document.body.style.overflow = "";
+            document.body.style.paddingRight = ""
         };
     }, [isActive]);
 
@@ -52,9 +55,9 @@ export const Burger = ({ setIsOpen }: IBurger) => {
             >
                 <div className={navContent}>
                     <ul className="flex flex-col gap-5 mb-[50px] text-xl">
-                        <li>Безкоштовний відео-урок</li>
-                        <li>Про курс</li>
-                        <li> Контакти</li>
+                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Безкоштовний відео-урок</li>
+                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Про курс</li>
+                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer"> Контакти</li>
                     </ul>
 
                     <Button

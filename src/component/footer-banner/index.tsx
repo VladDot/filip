@@ -26,7 +26,7 @@ export const FooterBanner = () => {
         </div>
 
          <div className="relative z-[10] flex flex-col gap-y-[10px] lg:gap-y-5 px-5 items-center sm:max-w-[495px] lg:px-0 lg:max-w-[712px] pt-5">
-         <div className='absolute z-[4] max-w-[1532px] max-h-[1656px] w-[86.5vw] h-[98vw] rounded-full bg-[#027DFA80] blur-[100px] right-0 translate-x-[83%] bottom-0 translate-y-[6%] rotate-[20deg] lg:blur-[150px]  xxl:blur-[200px] md:rotate-[13deg] md:translate-x-[90%] lg:bottom-[10%] xxl:bottom-0 xxl:translate-x-[95%]'/>
+         <div className='absolute z-[4] w-[86.5vw] h-[98vw] rounded-full bg-[#027DFA80] blur-[100px] right-0 translate-x-[83%] bottom-0 translate-y-[6%] rotate-[20deg] lg:blur-[300px]   md:rotate-[13deg] md:translate-x-[90%] lg:bottom-[20%] xxl:translate-x-[120%]  xxl:-translate-y-[10%]'/>
 
          <div className='absolute z-[4] w-[clamp(400px,50vw,1382px)] h-[clamp(300px,50vw,1000px)] rounded-full bg-[#027DFA80] blur-[80px] left-0 top-2/5 -translate-y-[70%] -translate-x-[40%] lg:-translate-y-[40%] md:-translate-x-[70%]  lg:blur-[100px] xxl:-translate-y-[30%] xxl:-translate-x-[80%] '/>
 

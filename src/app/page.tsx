@@ -13,15 +13,16 @@ export default function Home() {
     return (
         <>
             <Banner />
-            <div className="cubeBg">
+            <div className="cubeBg overflow-hidden">
                 <TargetAudience />
-                <LearningProcess />
                 <CareerDevelopment />
+                <LearningProcess />
                 <AuthorSupport />
                 <LearningOptions />
-                <div className="overflow-hidden"><div className="w-full bg-white "> <CourseProgram /></div>
+                
+                    <div className="w-full bg-white "> <CourseProgram /></div>
                
-                <FooterBanner/></div>
+                <FooterBanner/>
                 
             </div>
         </>
