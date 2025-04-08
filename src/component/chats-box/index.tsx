@@ -33,7 +33,7 @@ export const Chat = ({className}:IChatProps) => {
       <Social className="flex-col text-textBlue/80 md:text-[#D5D5D5] md:[&_*]:hover:text-textBlue duration-300 ease-in-out transition-all"/>
     </div>
 
-    <div className={cn("relative z-20 w-[60px] h-[60px] overflow-hidden",isOpen === false && 'hover:[&_*]:scale-110 hover:[&_*]:-translate-x-[2.5%] hover:[&_*]:-translate-y-[2.5%]')}>
+    <div className={cn("relative z-20 w-[60px] h-[60px] overflow-hidden",isOpen === false && 'hover:[&_*]:scale-110 hover:[&_*]:-translate-x-[3%] hover:[&_*]:-translate-y-[2.5%]')}>
       {!isOpen ? <SVGChat/>: <SVGChatClose/>}
 
     </div>

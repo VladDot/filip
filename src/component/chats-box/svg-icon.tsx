@@ -2,8 +2,10 @@ export const SVGChat = () => {
     return <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="60" height="60" rx="2" fill="#027DFA"/>
     <path d="M37.9998 28.0003H38.2004M30.0001 28.0003H30.1998M21.7998 28.0003H22.0004" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-  
+    <g style={{ mixBlendMode: 'plus-lighter' }} filter="url(#filter0_f_13_828)">
     <path d="M43.6205 38.4605L46.0003 48L36.0998 43.0397C34.1297 43.6787 32.0711 44.0026 30 43.9997C19.9997 43.9997 12 36.84 12 28.0003C12 19.1606 19.9997 12 30 12C40.0003 12 48 19.1597 48 28.0003C47.9675 31.926 46.3948 35.6829 43.6205 38.4605Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </g>
+
     <defs>
     <filter id="filter0_f_13_828" x="8.5" y="8.5" width="43" height="44.3026" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
     <feFlood floodOpacity="0" result="BackgroundImageFix"/>
