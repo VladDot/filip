@@ -5,7 +5,7 @@ import { CardsCareer } from './cards-career';
 
 export const CareerDevelopment = () => {
   return (
-    <div className="relative">
+    <div className="relative mb-20 md:mb-[100px] xxl:mb-[130px]">
       <div className="m-auto mb-[30px] max-w-[650px] text-center md:mb-[60px]">
         <SubTitle text="Мрія, яка стане реальністю" />
         <Title text="Кар'єрне зростання IT-фахівця" className="leading-[100%] lg:max-w-[500px]" />

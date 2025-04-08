@@ -23,7 +23,7 @@ export const Burger = ({ setIsOpen,onClick }: IBurger) => {
     useEffect(() => {
         if (isActive) {
             document.body.style.overflow = "hidden ";
-            document.body.style.paddingRight = "14px"
+            document.body.style.paddingRight = "8px"
         } else {
             document.body.style.overflow = "";
             document.body.style.paddingRight = ""

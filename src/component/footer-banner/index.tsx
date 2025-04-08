@@ -1,6 +1,5 @@
 import { Title } from "../title";
 import { Button } from "../button";
-import LazyVideo from "../lazy-video";
 import { SubTitle } from "../sub-title";
 
 export const FooterBanner = () => {
@@ -12,14 +11,11 @@ export const FooterBanner = () => {
         <div className='absolute z-[3] w-full h-[10%] bg-white rounded-full blur-[30px] -translate-y-[20%]  top-0 left-0 '/>
 
         <div className="absolute inset-0 flex justify-center items-center mix-blend-plus-lighter z-[3]">
-            <div className=" rotate-180 top-0 w-full ">
-
-            <LazyVideo src="/grid.mp4" className="w-full h-[450px] md:h-[450px] object-cover rotate-180" />
-
-            </div>           
-        </div>
-
-        <div className="relative z-[10] flex flex-col gap-y-[10px] lg:gap-y-5 px-5 items-center sm:max-w-[495px] lg:px-0 lg:max-w-[712px] pt-5">
+                <div className="  rotate-180 top-0 w-full ">
+                    <video src="/grid.mp4" autoPlay muted loop className="w-full h-[450px]  object-cover" />
+                </div>           
+            </div>
+        <div className="relative z-[10] flex flex-col gap-y-[10px] lg:gap-y-5 px-5 items-center sm:max-w-[495px] lg:px-0 lg:max-w-[712px] pt-16">
 
             <div className='absolute z-[4] w-[86.5vw] h-[98vw] rounded-full bg-[#027DFA80] blur-[100px] right-0 translate-x-[83%] bottom-0 translate-y-[6%] rotate-[20deg] lg:blur-[300px]   md:rotate-[13deg] md:translate-x-[90%] lg:bottom-[20%] xxl:translate-x-[120%]  xxl:-translate-y-[10%]'/>
 

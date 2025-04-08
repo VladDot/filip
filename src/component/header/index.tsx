@@ -37,7 +37,7 @@ export const Header = () => {
     };
 
     return (
-        <header className=" z-[995] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed backdrop-blur-[4px]">
+        <header className=" z-[998] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed backdrop-blur-[4px]">
             <div className="absolute top-0 left-0 h-full w-full z-[-1] " />
             <div className="flex items-center justify-between gap-8 w-full relative z-[2] mx-auto max-w-[1440px]">
             {width > 1024 &&
