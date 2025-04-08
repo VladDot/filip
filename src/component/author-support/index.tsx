@@ -5,7 +5,7 @@ import { SubTitle } from "../sub-title";
 
 export const AuthorSupport = () => {
     return (
-        <div className="lg:w-[1000px] m-auto xxl:w-[1320px] mb-20 md:mb-28 xxl:mb-40 relative z-[4]">
+        <section className="lg:w-[1000px] m-auto xxl:w-[1320px] mb-20 md:mb-28 xxl:mb-40 relative z-[4]">
             <div className='absolute z-[4] w-[86.5vw] h-[98vw] rounded-full bg-[#027DFA80] blur-[100px] right-0 translate-x-[83%] top-0  translate-y-[90%] sm:translate-y-[30%] lg:blur-[180px] lg:translate-y-[0%]  md:translate-x-[90%] lg:bottom-[20%] xxl:translate-x-[95%]  xxl:-translate-y-[20%] '/>
 
 <div className='absolute z-[4] w-[clamp(400px,50vw,1382px)] h-[clamp(300px,50vw,1000px)] rounded-full bg-[#027DFA80] blur-[120px] left-0 top-1/2 translate-y-[80%] -translate-x-[60%] lg:translate-y-[30%] md:-translate-x-[60%]   xxl:-translate-y-[30%] xxl:-translate-x-[80%] md:translate-y-[50%] lg:blur-[180px]  '/>
@@ -19,6 +19,6 @@ export const AuthorSupport = () => {
             </div>
 
             <Cards support={support} />
-        </div>
+        </section>
     );
 };

@@ -15,7 +15,6 @@ import {
 export default function Home() {
 
     return (
-        <>
             <div className="cubeBg overflow-hidden">
                 <Banner />
 
@@ -36,6 +35,5 @@ export default function Home() {
                 <Chat/>
                 
             </div>
-        </>
     );
 }

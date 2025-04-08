@@ -5,7 +5,7 @@ import "./style.css";
 
 export const Banner = () => {
     return (
-        <div className="relative h-[650px] w-full md:h-[808px] overflow-hidden z-[2] flex items-center justify-center">
+        <section className="relative h-[650px] w-full md:h-[808px] overflow-hidden z-[2] flex items-center justify-center">
 
                 <div className='absolute inset-0 z-[2] bgg mix-blend-plus-lighter '/>
                 
@@ -43,6 +43,6 @@ export const Banner = () => {
                         rotate
                     />
                 </div>
-        </div>
+        </section>
     );
 };

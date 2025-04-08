@@ -16,7 +16,7 @@ export const getStyle = ({ revers, rotate, className }: IStyleProps) => ({
         rotate && "rotate-90"
     ),
     arrowImg: cn(
-        "min-w-6 ease-in-out duration-300 group-hover/item:[&_*]:fill-white",
+        "min-w-6 ease-in-out duration-300 [&_*]:fill-white sm:[&_*]:fill-black group-hover/item:[&_*]:fill-white",
         rotate
             ? "-translate-x-6 group-hover/item:translate-x-0"
             : "sm:group-hover/item:-translate-x-6"

@@ -5,7 +5,7 @@ import { cardLess } from "./mock";
 
 export const LearningProcess = () => {
     return (
-        <section className="mb-20 relative z-[4]">
+        <section className="mb-20 lg:mb-40 relative z-[4]">
 
             <div className="text-center m-auto max-w-[651px] mb-[30px] sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 relative z-[4]">
                 <SubTitle text="Це саме те, що тобі потрібно" />

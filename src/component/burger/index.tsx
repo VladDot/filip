@@ -56,7 +56,7 @@ export const Burger = ({ setIsOpen,onClick }: IBurger) => {
                 ref={ref}
             >
                 <div className={navContent}>
-                    <ul className="flex flex-col gap-5 mb-[50px] text-xl">
+                    <ul className="flex flex-col w-fit gap-5 mb-[50px] text-xl">
                         <li onClick={onClick} className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Безкоштовний відео-урок</li>
                         <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Про курс</li>
                         <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer"> Контакти</li>
@@ -65,7 +65,7 @@ export const Burger = ({ setIsOpen,onClick }: IBurger) => {
                     <Button
                         text="Записатися на курс"
                         revers
-                        className="sm:bg-blueBg sm:[&>p>span]:text-white max-w-[335px]"
+                        className="sm:bg-blueBg sm:[&_*]:text-white max-w-[335px]"
                         onClick={handleClick}
                     />
                 </div>

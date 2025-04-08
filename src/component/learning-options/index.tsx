@@ -5,7 +5,7 @@ import { CardOptions } from "./card-options";
 
 export const LearningOptions = ({}) => {
     return (
-        <section className="mb-20 sm:mb-24 md:mb-28 xl:mb-32 xxl:[160px] ">
+        <section className="mb-20 sm:mb-24 md:mb-28 xl:mb-40">
             <div className="text-center m-auto pb-5 sm:pb-8 md:pb-12 lg:pb-16 xl:pb-20 relative z-[4]">
                 <SubTitle text="Обери те, що тобі найбільше підходить, Вибір за тобою" />
                 <Title
