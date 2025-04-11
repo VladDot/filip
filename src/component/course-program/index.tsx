@@ -23,8 +23,8 @@ export const CourseProgram = () => {
     setAccordionIndex(number);
   };
   return (
-    <section id="course_program" className="bg-white">
-      <div className="relative mx-auto mb-20 flex w-full max-w-[906px] scroll-mt-[90px] flex-col gap-y-[30px] px-4 lg:mb-28 lg:gap-y-[60px] xl:mb-[120px]">
+    <section id="course_program" className="mb-20 bg-white lg:mb-28 xl:mb-[210px]">
+      <div className="relative mx-auto flex w-full max-w-[906px] scroll-mt-[90px] flex-col gap-y-[30px] px-4 lg:gap-y-[60px]">
         <div className="xxl:blur-[200px] xxl:bottom-0 xxl:translate-x-[95%] absolute top-1/5 right-0 z-[4] h-[100vw] w-[90vw] translate-x-[30%] translate-y-[15%] rounded-full bg-[#027DFA80] blur-[100px] md:translate-x-[90%] md:rotate-[13deg] lg:bottom-[10%] lg:blur-[200px]" />
 
         <div className="xxl:-translate-x-[120%] xxl:blur-[150px] xxl:-translate-y-[60%] absolute top-1/5 left-0 z-[4] h-[clamp(200px,50vw,1000px)] w-[clamp(200px,50vw,1382px)] -translate-x-[90%] -translate-y-[50%] rounded-full bg-[#027DFA80] blur-[100px] md:-translate-y-[30%] lg:-translate-y-[20%] lg:blur-[150px]" />
