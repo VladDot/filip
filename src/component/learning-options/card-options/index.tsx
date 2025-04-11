@@ -1,7 +1,8 @@
-import Image from 'next/image';
-
 import { Button } from '@/component';
-import { DoneFilled } from '@/assets/icon';
+
+interface ISVGDoneProps {
+  className?: string;
+}
 
 interface ICardOptionsProps {
   price: string;
@@ -10,6 +11,26 @@ interface ICardOptionsProps {
   description: string;
   onClick: () => void;
 }
+
+const SVGDone = ({ className }: ISVGDoneProps) => {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M6.55563 13.7864L3 9.66567L3.88875 8.63568L7 12.2414L14.1113 4L15 5.02999L7.445 13.7864C7.38663 13.8541 7.31731 13.9078 7.24101 13.9445C7.1647 13.9811 7.08291 14 7.00031 14C6.91772 14 6.83593 13.9811 6.75962 13.9445C6.68332 13.9078 6.614 13.8541 6.55563 13.7864Z"
+        fill="#027DFA"
+      />
+    </svg>
+  );
+};
 
 export const CardOptions = ({ lists, price, title, description, onClick }: ICardOptionsProps) => {
   return (
@@ -31,8 +52,8 @@ export const CardOptions = ({ lists, price, title, description, onClick }: ICard
         <ul className="flex w-fit max-w-[420px] flex-col gap-y-5 *:cursor-default">
           {lists.map((list, idx) => (
             <li key={`${title}_${idx}`} className="flex items-start gap-2.5 text-base">
-              <div className="w-full max-w-3 pt-1">
-                <Image src={DoneFilled} alt="done_filled" className="w-full" />
+              <div className="w-full max-w-[18px] pt-1">
+                <SVGDone className="w-full" />
               </div>
               <p className="xxl:text-base text-sm">{list}</p>
             </li>
