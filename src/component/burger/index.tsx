@@ -1,75 +1,90 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import { useOutsideClick } from "@/hooks/outSideClick";
+import { useOutsideClick } from '@/hooks';
+import { scrollToSection } from '@/helpers';
 
-import { getStyles } from "./styles";
-import { Button } from "../button";
-
+import { Button } from '../button';
+import { getStyles } from './styles';
 
 interface IBurger {
-    setIsOpen: (value: boolean) => void;
-    onClick: () => void
+  setIsOpen: (value: boolean) => void;
+  onClick: () => void;
 }
 
-export const Burger = ({ setIsOpen,onClick }: IBurger) => {
-    const ref = useRef(null);
-    const [isActive, setIsActive] = useState(false);
-    const { burger, nav, navContent } = getStyles({ isActive });
+export const Burger = ({ setIsOpen, onClick }: IBurger) => {
+  const ref = useRef(null);
+  const [isActive, setIsActive] = useState(false);
+  const { burger, nav, navContent } = getStyles({ isActive });
 
-    useOutsideClick(() => setIsActive(false), ref);
+  useOutsideClick(() => setIsActive(false), ref);
 
-    useEffect(() => {
-        if (isActive) {
-            document.body.style.overflow = "hidden ";
-            document.body.style.paddingRight = "8px"
-        } else {
-            document.body.style.overflow = "";
-            document.body.style.paddingRight = ""
-        }
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = 'hidden ';
+      document.body.style.paddingRight = '8px';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
 
-        return () => {
-            document.body.style.overflow = "";
-            document.body.style.paddingRight = ""
-        };
-    }, [isActive]);
-
-    const handleClick = () => {
-        setIsActive(!isActive);
-        setIsOpen(true);
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
     };
+  }, [isActive]);
 
-    return (
-        <>
-            <button
-                className={burger}
-                onClick={() => setIsActive(!isActive)}
+  const handleClick = () => {
+    setIsActive(!isActive);
+    setIsOpen(true);
+  };
+
+  return (
+    <>
+      <button className={burger} onClick={() => setIsActive(!isActive)}>
+        <span className="bar-top"></span>
+        <span className="bar-mid"></span>
+        <span className="bar-bot"></span>
+      </button>
+
+      <nav className={nav} ref={ref}>
+        <div className={navContent}>
+          <ul className="mb-[50px] flex w-fit flex-col gap-5 text-xl">
+            <li
+              onClick={onClick}
+              className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
             >
-                <span className="bar-top"></span>
-                <span className="bar-mid"></span>
-                <span className="bar-bot"></span>
-            </button>
-
-            <nav
-                className={nav}
-                ref={ref}
+              Безкоштовний відео-урок
+            </li>
+            <li
+              onClick={() => {
+                setIsActive(!isActive);
+                scrollToSection('#course_program');
+              }}
+              className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
             >
-                <div className={navContent}>
-                    <ul className="flex flex-col w-fit gap-5 mb-[50px] text-xl">
-                        <li onClick={onClick} className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Безкоштовний відео-урок</li>
-                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">Про курс</li>
-                        <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer"> Контакти</li>
-                    </ul>
+              Про курс
+            </li>
+            <li
+              onClick={() => {
+                setIsActive(!isActive);
+                scrollToSection('#footer');
+              }}
+              className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
+            >
+              Контакти
+            </li>
+          </ul>
 
-                    <Button
-                        text="Записатися на курс"
-                        revers
-                        className="sm:bg-blueBg sm:[&_*]:fill-white  sm:[&_*]:text-white max-w-[335px]"
-                        onClick={handleClick}
-                    />
-                </div>
-            </nav>
-        </>
-    );
+          <Button
+            text="Записатися на курс"
+            revers
+            className="sm:bg-blueBg max-w-[335px] sm:[&_*]:fill-white sm:[&_*]:text-white"
+            onClick={handleClick}
+          />
+        </div>
+      </nav>
+    </>
+  );
 };

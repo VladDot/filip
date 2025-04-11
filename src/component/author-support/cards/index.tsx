@@ -1,133 +1,97 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { Filipp } from "@/assets/img";
-import { useWindowWidth } from "@/hooks/useWidth";
+import { Filipp } from '@/assets/img';
+import { useWindowWidth } from '@/hooks';
 
-import { Card } from "./card";
-import { ISupport } from "../mock";
+import { Card } from './card';
+import { ISupport } from '../mock';
 
 interface ICardsProps {
-    support: ISupport[];
+  support: ISupport[];
 }
 
 export const Cards = ({ support }: ICardsProps) => {
-    const width = useWindowWidth();
+  const width = useWindowWidth();
 
-    return (
-        <>
-            {width >= 640 && (
-                <div className="flex gap-5 items-center xxl:flex-row  xxl:items-start gap-y-5 w-full xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>ul>span]:-left-30 [&>*:last-child>*:first-child>ul>span]:top-[25%] relative z-[4]">
-                    <div className="flex flex-col gap-y-3 items-center xxl:gap-[158px] xxl:[&>div:last-child]:ml-[111px] ">
-                        <Card
-                            text={support[0].text}
-                            title={support[0].title}
-                            decor={support[0].decor}
-                        />
+  return (
+    <>
+      {width >= 640 && (
+        <div className="xxl:flex-row xxl:items-start xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>ul>span]:-left-30 relative z-[4] flex w-full items-center gap-5 gap-y-5 [&>*:last-child>*:first-child>ul>span]:top-[25%]">
+          <div className="xxl:gap-[158px] xxl:[&>div:last-child]:ml-[111px] flex flex-col items-center gap-y-3">
+            <Card text={support[0].text} title={support[0].title} decor={support[0].decor} />
 
-                        {width < 1440 && (
-                            <div className="bg-white border border-[#E0F0FF] p-4  w-fit sm:w-[240px] xxl:w-[300px] rounded-[2px] xxl:-translate-y-6 animate-[var(--animate-swing)]">
-                                <Image
-                                    src={Filipp}
-                                    alt="filipp"
-                                    className="rotate-[4.35deg] mb-1 rounded-[2px] w-full  "
-                                />
-                                <div className="flex flex-col w-fit">
-                                    <span>Serhii Filipp</span>
-                                    <Link
-                                        href={""}
-                                        className="text-textBlue"
-                                    >
-                                        @SergeyPC
-                                    </Link>
-                                </div>
-                            </div>
-                        )}
-                        <Card
-                            text={support[2].text}
-                            title={support[2].title}
-                            decor={support[2].decor}
-                        />
-                    </div>
-                    {width >= 1440 && (
-                        <div className="bg-white border border-[#E0F0FF] p-4  w-fit sm:w-[240px] xxl:w-[300px] rounded-[2px] xxl:-translate-y-6 animate-[var(--animate-swing)]">
-                            <Image
-                                src={Filipp}
-                                alt="filipp"
-                                className="rotate-[4.35deg] mb-1 rounded-[2px] w-full"
-                            />
-                            <div className="flex flex-col w-fit">
-                                <span>Serhii Filipp</span>
-                                <Link
-                                    href={""}
-                                    className="text-textBlue"
-                                >
-                                    @SergeyPC
-                                </Link>
-                            </div>
-                        </div>
-                    )}
-                    <div className="[&>div>ul]:list-disc [&>div>ul]:pl-7 ">
-                        {support
-                            .filter((_, index) => index === 1)
-                            .map(({ title, decor, text }, idx) => (
-                                <Card
-                                    text={text}
-                                    title={title}
-                                    decor={decor}
-                                    key={`${title}_${idx}`}
-                                />
-                            ))}
-                    </div>
+            {width < 1440 && (
+              <div className="xxl:w-[300px] xxl:-translate-y-6 w-fit animate-[var(--animate-swing)] rounded-[2px] border border-[#E0F0FF] bg-white p-4 sm:w-[240px]">
+                <Image
+                  src={Filipp}
+                  alt="filipp"
+                  className="mb-1 w-full rotate-[4.35deg] rounded-[2px]"
+                />
+                <div className="flex w-fit flex-col">
+                  <span>Serhii Filipp</span>
+                  <Link href={''} className="text-textBlue">
+                    @SergeyPC
+                  </Link>
                 </div>
+              </div>
             )}
+            <Card text={support[2].text} title={support[2].title} decor={support[2].decor} />
+          </div>
+          {width >= 1440 && (
+            <div className="xxl:w-[300px] xxl:-translate-y-6 w-fit animate-[var(--animate-swing)] rounded-[2px] border border-[#E0F0FF] bg-white p-4 sm:w-[240px]">
+              <Image
+                src={Filipp}
+                alt="filipp"
+                className="mb-1 w-full rotate-[4.35deg] rounded-[2px]"
+              />
+              <div className="flex w-fit flex-col">
+                <span>Serhii Filipp</span>
+                <Link href={''} className="text-textBlue">
+                  @SergeyPC
+                </Link>
+              </div>
+            </div>
+          )}
+          <div className="[&>div>ul]:list-disc [&>div>ul]:pl-7">
+            {support
+              .filter((_, index) => index === 1)
+              .map(({ title, decor, text }, idx) => (
+                <Card text={text} title={title} decor={decor} key={`${title}_${idx}`} />
+              ))}
+          </div>
+        </div>
+      )}
 
-            {width < 640 && (
-                <div className="flex flex-col gap-[30px] w-full [&>*:last-child>*:first-child>ul>span]:left-[10px] [&>*:last-child>*:first-child>ul>span]:top-[35px] pt-5 overflow-hidden relative z-[4]">
-                    {support
-                        .filter((_, index) => index === 0)
-                        .map(({ title, decor, text }, idx) => (
-                            <Card
-                                text={text}
-                                title={title}
-                                decor={decor}
-                                key={`${title}_${idx}`}
-                            />
-                        ))}
-                    <div className="flex justify-center  ">
-                        <div className="bg-white border border-[#E0F0FF] p-4 rounded-[2px] animate-[var(--animate-swing)] ">
-                            <Image
-                                src={Filipp}
-                                alt="filipp"
-                                className="rotate-[4.35deg] mb-1 rounded-[2px]"
-                            />
-                            <div className="flex flex-col">
-                                <span>Serhii Filipp</span>
-                                <Link
-                                    href={""}
-                                    className="text-textBlue"
-                                >
-                                    @SergeyPC
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="[&>div:first-child>ul]:list-disc [&>div:first-child>ul]:pl-7 flex flex-col gap-y-[30px]">
-                        {support
-                            .filter((_, index) => index !== 0)
-                            .map(({ title, decor, text }, idx) => (
-                                <Card
-                                    text={text}
-                                    title={title}
-                                    decor={decor}
-                                    key={`${title}_${idx}`}
-                                />
-                            ))}
-                    </div>
-                </div>
-            )}
-        </>
-    );
+      {width < 640 && (
+        <div className="relative z-[4] flex w-full flex-col gap-[30px] overflow-hidden pt-5 [&>*:last-child>*:first-child>ul>span]:top-[35px] [&>*:last-child>*:first-child>ul>span]:left-[10px]">
+          {support
+            .filter((_, index) => index === 0)
+            .map(({ title, decor, text }, idx) => (
+              <Card text={text} title={title} decor={decor} key={`${title}_${idx}`} />
+            ))}
+          <div className="flex justify-center">
+            <div className="animate-[var(--animate-swing)] rounded-[2px] border border-[#E0F0FF] bg-white p-4">
+              <Image src={Filipp} alt="filipp" className="mb-1 rotate-[4.35deg] rounded-[2px]" />
+              <div className="flex flex-col">
+                <span>Serhii Filipp</span>
+                <Link href={''} className="text-textBlue">
+                  @SergeyPC
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-[30px] [&>div:first-child>ul]:list-disc [&>div:first-child>ul]:pl-7">
+            {support
+              .filter((_, index) => index !== 0)
+              .map(({ title, decor, text }, idx) => (
+                <Card text={text} title={title} decor={decor} key={`${title}_${idx}`} />
+              ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
 };

@@ -1,30 +1,23 @@
-import { Title } from "../title";
-import { SubTitle } from "../sub-title";
-import { CardsProcess } from "./cards-process";
-import { cardLess } from "./mock";
+import { Title } from '../title';
+import { SubTitle } from '../sub-title';
+import { CardsProcess } from './cards-process';
+import { cardLess } from './mock';
 
 export const LearningProcess = () => {
-    return (
-        <section className="mb-20 lg:mb-40 relative z-[4]">
+  return (
+    <section className="relative z-[4] mb-20 px-5 lg:mb-40">
+      <div className="relative z-[4] m-auto mb-[30px] max-w-[651px] text-center sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
+        <SubTitle text="Це саме те, що тобі потрібно" />
+        <Title text="Як виглядає процес навчання?" />
+      </div>
 
-            <div className="text-center m-auto max-w-[651px] mb-[30px] sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 relative z-[4]">
-                <SubTitle text="Це саме те, що тобі потрібно" />
-                <Title text="Як виглядає процес навчання?" />
-            </div>
+      <div className="relative z-[4] flex flex-wrap justify-center gap-y-3 md:gap-y-0 lg:flex-nowrap">
+        {cardLess.map((items, idx) => {
+          return <CardsProcess idx={idx} {...items} key={`${items.title}_${idx}`} />;
+        })}
+      </div>
 
-            <div className="flex flex-wrap lg:flex-nowrap gap-y-3 md:gap-y-0 justify-center relative z-[4]">
-                {cardLess.map((items, idx) => {
-                    return (
-                        <CardsProcess
-                            idx={idx}
-                            {...items}
-                            key={`${items.title}_${idx}`}
-                        />
-                    );
-                })}
-            </div>
-
-            <div className='absolute z-[1] h-[15%] lg:h-[50%] bg-white rounded-full blur-[40px] lg:translate-y-[30%] lg:top-1/5 bottom-0 w-full'/>
-        </section>
-    );
+      <div className="absolute bottom-0 z-[1] h-[15%] w-full rounded-full bg-white blur-[40px] lg:top-1/5 lg:h-[50%] lg:translate-y-[30%]" />
+    </section>
+  );
 };

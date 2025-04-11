@@ -5,7 +5,7 @@ import { CardsCareer } from './cards-career';
 
 export const CareerDevelopment = () => {
   return (
-    <div className="relative mb-20 md:mb-[100px] xxl:mb-[130px]">
+    <div className="xxl:mb-[130px] relative mb-20 md:mb-[100px]">
       <div className="m-auto mb-[30px] max-w-[650px] text-center md:mb-[60px]">
         <SubTitle text="Мрія, яка стане реальністю" />
         <Title text="Кар'єрне зростання IT-фахівця" className="leading-[100%] lg:max-w-[500px]" />
@@ -15,16 +15,21 @@ export const CareerDevelopment = () => {
 
       <div className="xxl:-translate-x-[60%] xxl:blur-[150px] xxl:-translate-y-[40%] absolute top-2/5 left-0 z-[4] h-[clamp(200px,50vw,1000px)] w-[clamp(200px,50vw,1382px)] -translate-x-[70%] -translate-y-[50%] rounded-full bg-[#027DFA80] blur-[100px] md:-translate-y-[30%] lg:-translate-x-[60%] lg:-translate-y-[20%] lg:blur-[150px]" />
 
-      <div className="absolute inset-0 z-[5] flex items-center justify-center mix-blend-plus-lighter overflow-hidden">
-        <div className="absolute top-[60px] sm:top-[40px] left-1/2 z-[2] h-[1000px] w-[1200px] md:h-full md:w-full md:scale-125 md:top-1/2 max-w-[1400px] -translate-x-1/2 md:-translate-y-2/5 xxl:scale-100">
-          <video src="/animSquare.mp4" autoPlay muted loop className="h-full w-full  xxl:object-cover rotate-90 md:rotate-0" />
+      <div className="absolute inset-0 z-[5] flex items-center justify-center overflow-hidden mix-blend-plus-lighter">
+        <div className="xxl:scale-100 absolute top-[60px] left-1/2 z-[2] h-[1000px] w-[1200px] max-w-[1400px] -translate-x-1/2 sm:top-[40px] md:top-1/2 md:h-full md:w-full md:-translate-y-2/5 md:scale-125">
+          <video
+            src="/animSquare.mp4"
+            autoPlay
+            muted
+            loop
+            className="xxl:object-cover h-full w-full rotate-90 md:rotate-0"
+          />
         </div>
       </div>
 
       <div className="[&>div>div:first-child>div]:text-textBlue flex justify-center [&>div>div:first-child>div]:bg-white [&>div>div:first-child>h3]:text-black">
         <CardsCareer cardCareer={cardCareer} />
       </div>
-
     </div>
   );
 };

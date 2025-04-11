@@ -1,19 +1,19 @@
-import { cn } from "@/utilities";
+import { cn } from '@/utilities';
 
 interface ITitleProps {
-    text: string;
-    className?: string;
+  text: string;
+  className?: string;
 }
 
 export const Title = ({ text, className }: ITitleProps) => {
-    return (
-        <h3
-            className={cn(
-                "text-[clamp(28px,_4vw,_48px)] w-fit m-auto font-[600] ",
-                className
-            )}
-        >
-            {text}
-        </h3>
-    );
+  return (
+    <h3
+      className={cn(
+        'm-auto w-fit cursor-default text-[clamp(28px,_4vw,_48px)] leading-[100%] font-[600]',
+        className
+      )}
+    >
+      {text}
+    </h3>
+  );
 };

@@ -1,39 +1,37 @@
-"use client";
+'use client';
 
 import {
-    Banner,
-    AuthorSupport,
-    CourseProgram,
-    TargetAudience,
-    LearningProcess,
-    LearningOptions,
-    CareerDevelopment,
-    FooterBanner,
-    Chat,
-} from "@/component";
+  Banner,
+  AuthorSupport,
+  CourseProgram,
+  TargetAudience,
+  LearningProcess,
+  LearningOptions,
+  CareerDevelopment,
+  FooterBanner,
+  Chat,
+} from '@/component';
 
 export default function Home() {
+  return (
+    <div className="cubeBg overflow-hidden">
+      <Banner />
 
-    return (
-            <div className="cubeBg overflow-hidden">
-                <Banner />
+      <TargetAudience />
 
-                <TargetAudience />
+      <CareerDevelopment />
 
-                <CareerDevelopment />
+      <LearningProcess />
 
-                <LearningProcess />
+      <AuthorSupport />
 
-                <AuthorSupport />
+      <LearningOptions />
 
-                <LearningOptions />
-                
-                <div className="w-full bg-white "><CourseProgram /></div>
-               
-                <FooterBanner/>
+      <CourseProgram />
 
-                <Chat/>
-                
-            </div>
-    );
+      <FooterBanner />
+
+      <Chat />
+    </div>
+  );
 }

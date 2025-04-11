@@ -1,93 +1,90 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState } from 'react';
+import Image from 'next/image';
 
-import { Logo } from "@/assets/img";
-import { useWindowWidth } from "@/hooks/useWidth";
+import { Logo } from '@/assets/img';
+import { useWindowWidth } from '@/hooks';
+import { scrollToSection } from '@/helpers';
 
-import { Burger } from "../burger";
-import { Button } from "../button";
-import { FeedbackForm } from "../feedback-form";
+import { Burger } from '../burger';
+import { Button } from '../button';
+import { FeedbackForm } from '../feedback-form';
 
 export const Header = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const width = useWindowWidth();
+  const width = useWindowWidth();
 
-    const handleFreeLessonClick = () => {
-        const requestData = {
-            action: "freeLesson",
-        };
-        fetch("https://nuezowew9l.apigw.corezoid.com/getBotLink", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(requestData),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Success:", data);
-                window.open(data.tg_link, "_blank");
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-            });
+  const handleFreeLessonClick = () => {
+    const requestData = {
+      action: 'freeLesson',
     };
+    fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+        window.open(data.tg_link, '_blank');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
 
-    return (
-        <header className=" z-[998] w-full px-5 lg:px-[60px] lg:py-5 py-[18px] fixed backdrop-blur-[4px]">
-            <div className="absolute top-0 left-0 h-full w-full z-[-1] " />
-            <div className="flex items-center justify-between gap-8 w-full relative z-[2] mx-auto max-w-[1440px]">
-            {width > 1024 &&
-                <div className="hidden justify-between w-full min-[1025px]:flex">
-                    <Image
-                        src={Logo}
-                        alt="logo"
-                        className="z-[999] "
-                    />
-                    <div className="flex gap-7 items-center ">
-                        <ul className="flex flex-col md:flex-row gap-5 mb-[50px] md:mb-0 text-xl ">
-                            <li
-                                onClick={handleFreeLessonClick}
-                                className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer"
-                            >
-                                Безкоштовний відео-урок
-                            </li>
-                            <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">
-                                Про курс
-                            </li>
-                            <li className="hover:text-textBlue transition-all ease-in-out duration-150 cursor-pointer">
-                                Контакти
-                            </li>
-                        </ul>
-                        <Button
-                            text="Записатися на курс"
-                            onClick={() => setIsOpen(true)}
-                            className="w-[220px] px-3 [&_div_*]:fill-blueBg [&_p_*]:text-textBlue"
-                            
-                        />
-                    </div>
-                    <FeedbackForm
-                        isOpen={isOpen}
-                        setIsOpen={setIsOpen}
-                    />
-                </div>}
-                {width < 1025 &&
-                <div className="flex items-center justify-between w-full min-[1025px]:hidden">
-                    <Image
-                        src={Logo}
-                        alt="logo"
-                        className="z-[999]"
-                    />
-                    <Burger setIsOpen={() => setIsOpen(true)} onClick={handleFreeLessonClick}/>
-                    <FeedbackForm
-                        isOpen={isOpen}
-                        setIsOpen={setIsOpen}
-                    />
-                </div>}
+  return (
+    <header className="fixed z-[995] w-full px-5 py-[18px] backdrop-blur-[4px] lg:px-[60px] lg:py-5">
+      <div className="absolute top-0 left-0 z-[-1] h-full w-full" />
+
+      <div className="relative z-[2] mx-auto flex w-full max-w-[1440px] items-center justify-between gap-8">
+        {width > 1024 && (
+          <div className="hidden w-full justify-between min-[1025px]:flex">
+            <Image src={Logo} alt="logo" className="z-[999]" />
+            <div className="flex items-center gap-7">
+              <ul className="mb-[50px] flex flex-col gap-5 text-xl md:mb-0 md:flex-row">
+                <li
+                  onClick={handleFreeLessonClick}
+                  className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
+                >
+                  Безкоштовний відео-урок
+                </li>
+
+                <li
+                  onClick={() => scrollToSection('#course_program')}
+                  className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
+                >
+                  Про курс
+                </li>
+
+                <li
+                  onClick={() => scrollToSection('#footer')}
+                  className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
+                >
+                  Контакти
+                </li>
+              </ul>
+              <Button
+                text="Записатися на курс"
+                onClick={() => setIsOpen(true)}
+                className="[&_div_*]:fill-blueBg [&_p_*]:text-textBlue w-[220px] px-3"
+              />
             </div>
-        </header>
-    );
+            <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+        )}
+        {width < 1025 && (
+          <div className="flex w-full items-center justify-between min-[1025px]:hidden">
+            <Image src={Logo} alt="logo" className="z-[999]" />
+            <Burger setIsOpen={() => setIsOpen(true)} onClick={handleFreeLessonClick} />
+            <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+        )}
+      </div>
+    </header>
+  );
 };

@@ -1,149 +1,136 @@
-"use client";
+'use client';
 
-import { useRef, useState } from "react";
-import { useOutsideClick } from "@/hooks/outSideClick";
+import { useRef, useState } from 'react';
+import { useOutsideClick } from '@/hooks';
 
-import { Input } from "./input";
-import { Modal } from "../modal";
-import { Button } from "../button";
+import { Input } from './input';
+import { Modal } from '../modal';
+import { Button } from '../button';
 
 interface IFeedbackFormProps {
-    isOpen: boolean;
-    setIsOpen: (value: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
 }
 
 export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
-    const [form, setForm] = useState({
-        email: "",
-        lastName: "",
-        firstName: "",
-    });
-    const [error, setError] = useState({
-        email: "",
-        lastName: "",
-        firstName: "",
-    });
-    const ref = useRef<HTMLDivElement>(null);
+  const [form, setForm] = useState({
+    email: '',
+    lastName: '',
+    firstName: '',
+  });
+  const [error, setError] = useState({
+    email: '',
+    lastName: '',
+    firstName: '',
+  });
+  const ref = useRef<HTMLDivElement>(null);
 
-    useOutsideClick(() => setIsOpen(false), ref);
+  useOutsideClick(() => setIsOpen(false), ref);
 
-    const validateEmail = (email: string) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+    setError((prevError) => ({
+      ...prevError,
+      [e.target.name]: '',
+    }));
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newError = {
+      firstName: form.firstName ? '' : "Це обов'язкове поле",
+      lastName: form.lastName ? '' : "Це обов'язкове поле",
+      email: form.email ? '' : "Це обов'язкове поле",
     };
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+    if (form.email && !validateEmail(form.email)) {
+      newError.email = 'Некоректний email';
+    }
 
-        setError((prevError) => ({
-            ...prevError,
-            [e.target.name]: "",
-        }));
-    };
+    setError(newError);
 
-    const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const isValid = Object.values(newError).every((err) => err === '');
+    if (isValid) {
+      setError({ email: '', lastName: '', firstName: '' });
 
-        const newError = {
-            firstName: form.firstName ? "" : "Це обов'язкове поле",
-            lastName: form.lastName ? "" : "Це обов'язкове поле",
-            email: form.email ? "" : "Це обов'язкове поле",
-        };
+      const formData = {
+        name: form.firstName,
+        surname: form.lastName,
+        email: form.email,
+      };
 
-        if (form.email && !validateEmail(form.email)) {
-            newError.email = "Некоректний email";
-        }
+      fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Success:', data);
+          window.open(data.tg_link, '_blank');
 
-        setError(newError);
+          setForm({
+            email: '',
+            lastName: '',
+            firstName: '',
+          });
 
-        const isValid = Object.values(newError).every((err) => err === "");
-        if (isValid) {
-            setError({ email: "", lastName: "", firstName: "" });
+          setIsOpen(false);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+  };
 
-            const formData = {
-                name: form.firstName,
-                surname: form.lastName,
-                email: form.email,
-            };
-
-            fetch("https://nuezowew9l.apigw.corezoid.com/getBotLink", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log("Success:", data);
-                    window.open(data.tg_link, "_blank");
-
-                    setForm({
-                        email: "",
-                        lastName: "",
-                        firstName: "",
-                    });
-
-                    setIsOpen(false);
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
-        }
-    };
-
-    return (
-        <Modal
-            isOpen={isOpen}
-            setClose={() => setIsOpen(false)}
-        >
-            <div
-                ref={ref}
-                className="space-y-4 p-6 bg-gray-100 rounded-lg shadow max-w-[350px] sm:max-w-[500px]"
-            >
-                <h3 className="text-xl font-medium">
-                    Залиште свої дані, щоб наш консультант міг зв’язатися з вами
-                </h3>
-                <form
-                    onSubmit={handleFormSubmit}
-                    className="flex flex-col gap-y-[10px] "
-                >
-                    <Input
-                        placeholder="Ваше ім’я"
-                        name="firstName"
-                        value={form.firstName}
-                        error={error.firstName}
-                        onChange={handleChange}
-                    />
-                    <Input
-                        name="lastName"
-                        value={form.lastName}
-                        error={error.lastName}
-                        onChange={handleChange}
-                        placeholder="Ваше прізвище"
-                    />
-                    <Input
-                        name="email"
-                        type="email"
-                        value={form.email}
-                        error={error.email}
-                        className="mb-[30px]"
-                        onChange={handleChange}
-                        placeholder="Введіть свою пошту"
-                    />
-                    {Object.values(error).some((err) => err) && (
-                        <p className="text-red-500 text-sm">
-                            Будь ласка, заповніть усі поля
-                        </p>
-                    )}
-                    <Button
-                        text="Подати заявку"
-                        className="max-w-[278px] text-center [&>p]:m-auto"
-                    />
-                </form>
-            </div>
-        </Modal>
-    );
+  return (
+    <Modal isOpen={isOpen} setClose={() => setIsOpen(false)}>
+      <div
+        ref={ref}
+        className="max-w-[350px] space-y-4 rounded-lg bg-gray-100 p-6 shadow sm:max-w-[500px]"
+      >
+        <h3 className="text-xl font-medium">
+          Залиште свої дані, щоб наш консультант міг зв’язатися з вами
+        </h3>
+        <form onSubmit={handleFormSubmit} className="flex flex-col gap-y-[10px]">
+          <Input
+            placeholder="Ваше ім’я"
+            name="firstName"
+            value={form.firstName}
+            error={error.firstName}
+            onChange={handleChange}
+          />
+          <Input
+            name="lastName"
+            value={form.lastName}
+            error={error.lastName}
+            onChange={handleChange}
+            placeholder="Ваше прізвище"
+          />
+          <Input
+            name="email"
+            type="email"
+            value={form.email}
+            error={error.email}
+            className="mb-[30px]"
+            onChange={handleChange}
+            placeholder="Введіть свою пошту"
+          />
+          {Object.values(error).some((err) => err) && (
+            <p className="text-sm text-red-500">Будь ласка, заповніть усі поля</p>
+          )}
+          <Button text="Подати заявку" className="max-w-[278px] text-center [&>p]:m-auto" />
+        </form>
+      </div>
+    </Modal>
+  );
 };

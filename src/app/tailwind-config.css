@@ -1,59 +1,58 @@
 :root {
-    --color-blue: #027dfa;
-    --color-dark: #181818;
-    --color-bright: #f6fbff;
-    --color-ellipse: rgba(2, 125, 250, 0.4);
+  --color-blue: #027dfa;
+  --color-dark: #181818;
+  --color-bright: #f6fbff;
+  --color-ellipse: rgba(2, 125, 250, 0.4);
+  --color-border: rgb(224, 240, 255);
 }
 
 @theme inline {
-    --font-poppins: "Poppins", sans-serif;
-    --font-montserrat: "Montserrat", sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
 
-    /*  colors */
-    --color-textBlue: var(--color-blue);
-    --color-blueBg: var(--color-blue);
-    --color-blueBorder: var(--color-blue);
-    --color-darkText: var(--color-dark);
-    --color-ellipseBlue: var(--color-ellipse);
-    --color-brightBg: var(--color-bright);
+  /*  colors */
+  --color-textBlue: var(--color-blue);
+  --color-blueBg: var(--color-blue);
+  --color-blueBorder: var(--color-blue);
+  --color-darkText: var(--color-dark);
+  --color-ellipseBlue: var(--color-ellipse);
+  --color-brightBg: var(--color-bright);
+  --color-borderBg: var(--color-border);
 
-    /* respons */
-    --breakpoint-xxl: 90rem;
+  /* respons */
+  --breakpoint-xxl: 90rem;
 
-    /* animate */
-    --animate-swing: swing 3s ease-in-out infinite;
-    --animate-fade-opacity: fade-opacity 1s ease-in-out ;
-    /* shadow */
-    --shadow-shadowEllipseBlue: 0 0 1000px var(--color-ellipse);
+  /* animate */
+  --animate-swing: swing 3s ease-in-out infinite;
+  --animate-fade-opacity: fade-opacity 1s ease-in-out;
+  /* shadow */
+  --shadow-shadowEllipseBlue: 0 0 1000px var(--color-ellipse);
 }
 
-
- 
-  
-    @keyframes fade-opacity {
-      0% {
-        opacity: 0;
-      }
-       100%  {
-        opacity: 1;
-      }
-    }
-
+@keyframes fade-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes swing {
-    0% {
-        transform: rotate(5deg);
-    }
-    20% {
-        transform: rotate(5deg);
-    }
-    50% {
-        transform: rotate(-5deg);
-    }
-    70% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(5deg);
-    }
+  0% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
