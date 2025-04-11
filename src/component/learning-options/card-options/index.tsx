@@ -23,8 +23,8 @@ const SVGDone = ({ className }: ISVGDoneProps) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M6.55563 13.7864L3 9.66567L3.88875 8.63568L7 12.2414L14.1113 4L15 5.02999L7.445 13.7864C7.38663 13.8541 7.31731 13.9078 7.24101 13.9445C7.1647 13.9811 7.08291 14 7.00031 14C6.91772 14 6.83593 13.9811 6.75962 13.9445C6.68332 13.9078 6.614 13.8541 6.55563 13.7864Z"
         fill="#027DFA"
       />
