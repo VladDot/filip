@@ -34,7 +34,7 @@ export const CourseProgram = () => {
             <Title text="Програма курса " className="mb-2 leading-[100%] md:mb-0" />
             <div className="flex items-end justify-center gap-3">
               <Image src={Time} alt="time" className="w-8" />
-              <span className="text-textBlue font-semibold">20 занять</span>
+              <span className="text-textBlue cursor-default font-semibold">20 занять</span>
             </div>
           </div>
         </div>

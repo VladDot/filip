@@ -50,7 +50,7 @@ export const Banner = () => {
       </div>
 
       <div className="relative z-[10] flex flex-col items-center gap-y-[10px] px-5 sm:max-w-[495px] lg:max-w-[650px] lg:gap-y-[30px] lg:px-0">
-        <h1 className="text-center text-[clamp(36px,_4vw,_72px)] leading-[100%] font-semibold">
+        <h1 className="cursor-default text-center text-[clamp(36px,_4vw,_72px)] leading-[100%] font-semibold">
           Твій шлях у світ IT: сучасні курси для майбутніх професіоналів
         </h1>
 

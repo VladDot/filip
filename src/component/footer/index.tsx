@@ -50,7 +50,7 @@ export const Footer = ({}) => {
             </div>
 
             <div className="flex flex-col">
-              <p className="mb-2.5 sm:text-end lg:mb-4">Ми в соцмережах</p>
+              <p className="mb-2.5 cursor-default sm:text-end lg:mb-4">Ми в соцмережах</p>
 
               <Social className="mb-[60px] sm:mb-9 lg:mb-[42px]" />
 

@@ -4,7 +4,7 @@ import { ISupport } from '../../mock';
 
 export const Card = ({ decor, text, title }: ISupport) => {
   return (
-    <div className="md:[360px] xxl:w-[427px] relative z-[4] h-fit px-5">
+    <div className="md:[360px] xxl:w-[427px] relative z-[4] h-fit px-5 *:cursor-default">
       <Title text={title} className="m-0 mb-[10px] text-[clamp(20px,_4vw,_28px)]" />
 
       <ul className="flex flex-col gap-4 md:text-[18px]">
