@@ -5,7 +5,7 @@ import { CardsCareer } from './cards-career';
 export const CareerDevelopment = () => {
   return (
     <div className="xxl:mb-[130px] relative mb-20 md:mb-[100px]">
-      <div className="m-auto mb-[30px] max-w-[650px] text-center md:mb-[60px]">
+      <div className="m-auto mb-[30px] max-w-[300px] text-center sm:max-w-[650px] md:mb-[60px]">
         <Title
           text="Як розвивається Corezoid-спеціаліст"
           className="leading-[100%] lg:max-w-[500px]"
