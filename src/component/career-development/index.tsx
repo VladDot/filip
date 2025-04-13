@@ -1,14 +1,15 @@
 import { Title } from '../title';
 import { cardCareer } from './mock';
-import { SubTitle } from '../sub-title';
 import { CardsCareer } from './cards-career';
 
 export const CareerDevelopment = () => {
   return (
     <div className="xxl:mb-[130px] relative mb-20 md:mb-[100px]">
       <div className="m-auto mb-[30px] max-w-[650px] text-center md:mb-[60px]">
-        <SubTitle text="Мрія, яка стане реальністю" />
-        <Title text="Кар'єрне зростання IT-фахівця" className="leading-[100%] lg:max-w-[500px]" />
+        <Title
+          text="Як розвивається Corezoid-спеціаліст"
+          className="leading-[100%] lg:max-w-[500px]"
+        />
       </div>
 
       <div className="xxl:blur-[200px] xxl:-translate-y-[20%] xxl:translate-x-[80%] absolute top-0 right-0 z-[4] h-[80vw] w-[90vw] translate-x-[30%] translate-y-[30%] rounded-full bg-[#027DFA80] blur-[100px] sm:translate-x-[50%] sm:translate-y-[10%] sm:blur-[180px] lg:translate-x-[70%] lg:blur-[200px]" />
@@ -22,7 +23,7 @@ export const CareerDevelopment = () => {
             autoPlay
             muted
             loop
-            className="xxl:object-cover h-full w-full rotate-90 md:rotate-0"
+            className="xxl:object-cover pointer-events-none h-full w-full rotate-90 select-none md:rotate-0"
           />
         </div>
       </div>

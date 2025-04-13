@@ -4,6 +4,8 @@
   --color-bright: #f6fbff;
   --color-ellipse: rgba(2, 125, 250, 0.4);
   --color-border: rgb(224, 240, 255);
+  --color-form-border: #035cc91a;
+  --color-btn-border: #035cc9;
 }
 
 @theme inline {
@@ -19,6 +21,8 @@
   --color-ellipseBlue: var(--color-ellipse);
   --color-brightBg: var(--color-bright);
   --color-borderBg: var(--color-border);
+  --color-formBorder: var(--color-form-border);
+  --color-btnBorder: var(--color-btn-border);
 
   /* respons */
   --breakpoint-xxl: 90rem;

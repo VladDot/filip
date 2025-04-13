@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 import { Title } from '../title';
-import { SubTitle } from '../sub-title';
 import { mockCards } from './mock-config';
 import { CardOptions } from './card-options';
 import { FeedbackForm } from '../feedback-form';
@@ -14,8 +13,7 @@ export const LearningOptions = ({}) => {
   return (
     <section id="learning_options" className="mb-20 px-5 sm:mb-24 md:mb-28 lg:mb-40">
       <div className="relative z-[4] m-auto mb-5 text-center sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20">
-        <SubTitle text="Обери те, що тобі найбільше підходить, Вибір за тобою" />
-        <Title className="max-w-[651px]" text="Існують два варіанти індивідуального навчання" />
+        <Title className="max-w-[651px]" text="Обери формат навчання, який підходить саме тобі" />
       </div>
       <div className="even:[&_div_.lastItem]:last:bg-brightBg relative z-10 m-auto flex w-full flex-col items-stretch gap-5 sm:w-fit xl:flex-row [&_div_.lastItem]:odd:bg-white">
         {mockCards.map((card, index) => (

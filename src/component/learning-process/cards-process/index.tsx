@@ -1,13 +1,10 @@
-import { cn } from '@/utilities';
-
 interface ICardsProcess {
+  idx: number;
   title: string;
   content: string;
-  subContent?: string;
-  idx: number;
 }
 
-export const CardsProcess = ({ idx, title, content, subContent }: ICardsProcess) => {
+export const CardsProcess = ({ idx, title, content }: ICardsProcess) => {
   return (
     <div className="m-auto flex w-full flex-row *:cursor-default sm:max-w-[420px] sm:gap-x-4 md:m-0 md:max-w-[359px] md:flex-col">
       <div className="flex flex-col lg:mb-[60px]">
@@ -18,8 +15,7 @@ export const CardsProcess = ({ idx, title, content, subContent }: ICardsProcess)
       <div className="ml-6 max-w-[267px] pt-[6px] lg:pt-0">
         <h4 className="text-blueBg mb-4 text-2xl lg:text-[32px]">{title}</h4>
 
-        <p className={cn('text-darkText text-[18px]', subContent && 'mb-6')}>{content}</p>
-        {subContent && <p className="text-darkText text-[18px]">{subContent}</p>}
+        <p className="text-darkText text-[18px]">{content}</p>
       </div>
     </div>
   );

@@ -71,7 +71,7 @@ export const Header = () => {
               <Button
                 text="Записатися на курс"
                 onClick={() => setIsOpen(true)}
-                className="[&_div_*]:fill-blueBg [&_p_*]:text-textBlue w-[220px] px-3"
+                className="[&_div_*]:fill-blueBg [&_p_*]:text-textBlue w-[220px] justify-normal gap-[10px] pr-[10px] pl-1"
               />
             </div>
             <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
