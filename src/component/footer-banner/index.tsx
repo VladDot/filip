@@ -34,7 +34,13 @@ export const FooterBanner = () => {
 
       <div className="absolute inset-0 z-[5] flex items-center justify-center mix-blend-plus-lighter">
         <div className="absolute top-0 z-[2] w-full">
-          <video src="/grid.mp4" autoPlay muted loop className="h-[450px] w-full object-cover" />
+          <video
+            loop
+            muted
+            autoPlay
+            src="/grid.mp4"
+            className="pointer-events-none h-[450px] w-full object-cover select-none"
+          />
         </div>
       </div>
       <div className="relative z-[10] flex flex-col items-center gap-y-[10px] px-5 sm:max-w-[495px] lg:max-w-[713px] lg:gap-y-5 lg:px-0">
@@ -42,18 +48,18 @@ export const FooterBanner = () => {
         <div className="absolute top-2/5 right-0 z-[4] h-[clamp(300px,50vw,1000px)] w-[clamp(400px,50vw,1382px)] translate-x-[60%] -translate-y-[20%] rounded-full bg-[#027DFA80] blur-[80px] md:hidden" />
 
         <Title
-          text="Запишись на перше безкоштовне заняття"
+          text="Подивись безкоштовний відео-урок"
           className="m-0 text-center text-[clamp(36px,_4vw,_64px)] leading-[100%] font-semibold lg:px-6 xl:px-0"
         />
 
         <SubTitle
-          text="Спробуй навчання без ризиків! Отримай перший урок безкоштовно, познайомся з викладачем і методикою, щоб впевнено зробити крок у світ IT."
+          text="Дізнайся, що таке Corezoid, як він працює та де застосовується — так тобі буде простіше зрозуміти, чи підходить курс саме тобі"
           className="m-0 mb-[30px] text-center text-[clamp(18px,_4vw,_24px)] lg:mb-[40px] lg:px-2"
         />
         <Button
-          text="Переглянути курси"
-          className="w-[232px] text-black"
-          rotate
+          text="Переглянути урок"
+          className="w-[216px] text-black"
+          revers
           onClick={handleFreeLessonClick}
         />
       </div>

@@ -1,22 +1,17 @@
-import { Title } from "../title";
-import { cardsUseful } from "./mock";
-import { SubTitle } from "../sub-title";
-import { CardsUseful } from "./cards-useful";
+import { Title } from '../title';
+import { cardsUseful } from './mock';
+import { CardsUseful } from './cards-useful';
 
 export const TargetAudience = () => {
-    return (
-        <section className="w-max-[1320px] mb-16 lg:mb-40 bg-white px-5 xl:pl-[60px] xl:pr-12 xxl:mx-auto">
-            <div className="max-w-[650px] m-auto md:mb-[60px] text-center mb-[30px]">
-                <SubTitle text="Це саме те, що тобі потрібно " />
-                <Title
-                    text="Для кого будуть корисні наші курси?"
-                    className="leading-[100%]"
-                />
-            </div>
+  return (
+    <section className="w-max-[1320px] xxl:mx-auto mb-16 bg-white px-5 pt-6 lg:mb-40 xl:pr-12 xl:pl-[60px]">
+      <div className="m-auto mb-[30px] max-w-[650px] text-center md:mb-[60px]">
+        <Title text="Для кого будуть корисні наші курси?" className="leading-[100%]" />
+      </div>
 
-            <div className="xxl:[&>div>div:last-child]:border-r-0 [&>div>div:last-child]:border-b-0 md:[&>div>div:last-child]:border-b xxl:[&>div>div:last-child]:border-b-0 flex justify-center">
-                <CardsUseful cardsUseful={cardsUseful} />
-            </div>
-        </section>
-    );
+      <div className="xxl:[&>div>div:last-child]:border-r-0 xxl:[&>div>div:last-child]:border-b-0 flex justify-center [&>div>div:last-child]:border-b-0 md:[&>div>div:last-child]:border-b">
+        <CardsUseful cardsUseful={cardsUseful} />
+      </div>
+    </section>
+  );
 };

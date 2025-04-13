@@ -8,7 +8,7 @@ interface ICardOptionsProps {
   price: string;
   title: string;
   lists: string[];
-  description: string;
+  description: string[];
   onClick: () => void;
 }
 
@@ -38,8 +38,16 @@ export const CardOptions = ({ lists, price, title, description, onClick }: ICard
       <div className="rounder-[2px] flex h-full w-full flex-col justify-between py-5 pl-5 sm:max-w-[400px]">
         <div className="*:cursor-default sm:mb-5 sm:max-w-[285px]">
           <p className="mb-10 text-[clamp(16px,_4vw,_20px)] font-semibold">{price}</p>
-          <h4 className="text-textBlue mb-5 text-[clamp(20px,_4vw,_32px)] font-bold">{title}</h4>
-          <p className="text-[clamp(14px,_4vw,_18px)] font-medium">{description}</p>
+          <h4 className="text-textBlue mb-5 text-[clamp(20px,_4vw,_32px)] leading-[120%] font-bold">
+            {title}
+          </h4>
+          <div className="flex flex-col gap-y-6">
+            {description.map((text, idx) => (
+              <p key={`${text}_${idx}`} className="text-[clamp(14px,_4vw,_18px)] font-medium">
+                {text}
+              </p>
+            ))}
+          </div>
         </div>
         <Button
           revers

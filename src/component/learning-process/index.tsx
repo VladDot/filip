@@ -1,13 +1,11 @@
 import { Title } from '../title';
-import { SubTitle } from '../sub-title';
-import { CardsProcess } from './cards-process';
 import { cardLess } from './mock';
+import { CardsProcess } from './cards-process';
 
 export const LearningProcess = () => {
   return (
     <section className="relative z-[4] mb-20 px-5 lg:mb-40">
       <div className="relative z-[4] m-auto mb-[30px] max-w-[651px] text-center sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
-        <SubTitle text="Це саме те, що тобі потрібно" />
         <Title text="Як виглядає процес навчання?" />
       </div>
 

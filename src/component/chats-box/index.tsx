@@ -34,11 +34,11 @@ export const Chat = ({ className }: IChatProps) => {
     >
       <div
         className={cn(
-          'absolute top-0 left-1/2 h-0 -translate-x-1/2 -translate-y-1/2 overflow-hidden duration-150 ease-in-out',
-          isOpen && '-top-[110%] h-fit -translate-y-18 overflow-visible'
+          'absolute top-0 left-1/2 h-0 -translate-x-1/2 -translate-y-[75%] overflow-hidden duration-150 ease-in-out',
+          isOpen && '-top-[110%] h-fit -translate-y-40 overflow-visible'
         )}
       >
-        <Social className="text-textBlue/80 md:[&_*]:hover:text-textBlue flex-col duration-300 ease-in-out md:text-[#D5D5D5]" />
+        <Social className="text-textBlue/80 md:[&_*]:hover:text-textBlue md:text-darkText flex-col duration-300 ease-in-out" />
       </div>
 
       <div

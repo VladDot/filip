@@ -66,12 +66,17 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
         email: form.email,
       };
 
+      const updatedFormData = {
+        ...formData,
+        action: 'groupTraining',
+      };
+
       fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(updatedFormData),
       })
         .then((response) => response.json())
         .then((data) => {
@@ -94,11 +99,8 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
 
   return (
     <Modal isOpen={isOpen} setClose={() => setIsOpen(false)}>
-      <div
-        ref={ref}
-        className="max-w-[350px] space-y-4 rounded-lg bg-gray-100 p-6 shadow sm:max-w-[500px]"
-      >
-        <h3 className="text-xl font-medium">
+      <div ref={ref} className="max-w-[325px] space-y-4 rounded-[2px] bg-gray-100 p-6 shadow">
+        <h3 className="mb-6 text-xl leading-[110%] font-medium">
           Залиште свої дані, щоб наш консультант міг зв’язатися з вами
         </h3>
         <form onSubmit={handleFormSubmit} className="flex flex-col gap-y-[10px]">
@@ -128,7 +130,10 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
           {Object.values(error).some((err) => err) && (
             <p className="text-sm text-red-500">Будь ласка, заповніть усі поля</p>
           )}
-          <Button text="Подати заявку" className="max-w-[278px] text-center [&>p]:m-auto" />
+          <Button
+            text="Подати заявку"
+            className="border-btnBorder justify-normal gap-6 text-center"
+          />
         </form>
       </div>
     </Modal>
