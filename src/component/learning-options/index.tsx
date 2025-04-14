@@ -15,7 +15,7 @@ export const LearningOptions = ({}) => {
       <div className="relative z-[4] m-auto mb-5 text-center sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20">
         <Title className="max-w-[651px]" text="Обери формат навчання, який підходить саме тобі" />
       </div>
-      <div className="even:[&_div_.lastItem]:last:bg-brightBg relative z-10 m-auto flex w-full flex-col items-stretch gap-5 sm:w-fit xl:flex-row [&_div_.lastItem]:odd:bg-white">
+      <div className="even:[&_div_.lastItem]:last:bg-brightBg relative z-10 m-auto flex flex-wrap items-stretch gap-5 sm:w-fit xl:flex-row [&_div_.lastItem]:odd:bg-white">
         {mockCards.map((card, index) => (
           <CardOptions key={`${card.title}_${index}`} {...card} onClick={() => setIsOpen(true)} />
         ))}
