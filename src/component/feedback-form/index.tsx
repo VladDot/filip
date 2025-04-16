@@ -101,7 +101,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
     <Modal isOpen={isOpen} setClose={() => setIsOpen(false)}>
       <div ref={ref} className="max-w-[325px] space-y-4 rounded-[2px] bg-gray-100 p-6 shadow">
         <h3 className="mb-6 text-xl leading-[110%] font-medium">
-          Залиште свої дані, щоб наш консультант міг зв’язатися з вами
+          Для запису на курс залиште ваші дані
         </h3>
         <form onSubmit={handleFormSubmit} className="flex flex-col gap-y-[10px]">
           <Input

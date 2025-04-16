@@ -12,7 +12,7 @@ export const CardsProcess = ({ idx, title, content }: ICardsProcess) => {
         <div className="bg-blueBg/10 after:bg-blueBg md:after:bg-blueBg relative mb-4 ml-[38px] h-full w-2 rounded-[2px] after:absolute after:top-3 after:-left-[8px] after:h-3 after:w-3 after:translate-x-1/2 md:ml-0 md:h-2 md:w-full md:after:absolute md:after:top-1/2 md:after:left-[26px] md:after:h-[18px] md:after:w-[18px] md:after:-translate-y-1/2" />
       </div>
 
-      <div className="ml-6 max-w-[267px] pt-[6px] lg:pt-0">
+      <div className="ml-6 max-w-[260px] pt-[6px] lg:pt-0">
         <h4 className="text-blueBg mb-4 text-2xl lg:text-[32px]">{title}</h4>
 
         <p className="text-darkText text-[18px]">{content}</p>

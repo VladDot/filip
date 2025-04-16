@@ -30,13 +30,13 @@ export const Banner = () => {
         </div>
       </div>
 
-      <div className="xxl:max-w-[1050px] relative z-[10] flex flex-col items-center gap-y-[10px] px-5 sm:max-w-[495px] lg:max-w-[800px] lg:gap-y-[30px] lg:px-0">
-        <h1 className="xxl:text-7xl cursor-default text-center text-[clamp(36px,_4vw,_72px)] leading-[100%] font-semibold">
+      <div className="xxl:max-w-[900px] relative z-[10] flex flex-col items-center gap-y-[10px] px-5 sm:max-w-[495px] lg:max-w-[800px] lg:gap-y-[30px] lg:px-0">
+        <h1 className="xxl:text-[56px] cursor-default text-center text-[clamp(36px,_4vw,_56px)] leading-[100%] font-semibold">
           Опануй ІТ-професію Corezoid розробника з нуля
         </h1>
 
         <SubTitle
-          text="Покрокові відео-уроки, практика та реальні приклади допоможуть тобі навчитись створювати робочі процеси в Corezoid, працювати з API та використовувати JavaScript"
+          text="Відео-уроки, практика та реальні приклади допоможуть тобі навчитись створювати робочі процеси в Corezoid, працювати з API та використовувати JavaScript"
           className="m-0 mb-[30px] text-center text-[clamp(18px,_4vw,_22px)] lg:mb-[50px] lg:max-w-[700px] lg:px-2"
         />
 
