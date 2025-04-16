@@ -7,6 +7,7 @@ interface ISVGDoneProps {
 interface ICardOptionsProps {
   price: string;
   title: string;
+  subTitle?: string;
   lists: string[];
   description: string[];
   onClick: () => void;
@@ -32,14 +33,23 @@ const SVGDone = ({ className }: ISVGDoneProps) => {
   );
 };
 
-export const CardOptions = ({ lists, price, title, description, onClick }: ICardOptionsProps) => {
+export const CardOptions = ({
+  lists,
+  price,
+  title,
+  subTitle,
+  description,
+  onClick,
+}: ICardOptionsProps) => {
   return (
     <div className="rounder-[2px] odd:bg-brightBg even:[&_.lastItem]:bg-brightBg border-borderBg mx-auto flex w-fit flex-col gap-x-5 border-[1px] p-2.5 even:bg-white sm:flex-row sm:items-stretch odd:[&_.lastItem]:bg-white">
       <div className="rounder-[2px] flex h-full w-full flex-col justify-between py-5 pl-5 sm:max-w-[305px]">
         <div className="*:cursor-default sm:mb-5 sm:max-w-[285px]">
           <p className="mb-10 text-[clamp(16px,_4vw,_20px)] font-semibold">{price}</p>
-          <h4 className="text-textBlue mb-5 text-[clamp(20px,_4vw,_32px)] leading-[120%] font-bold">
+          <h4 className="text-textBlue mb-5 flex flex-col text-[clamp(20px,_4vw,_32px)] leading-[120%] font-bold">
             {title}
+
+            {subTitle ? <span>{subTitle}</span> : null}
           </h4>
           <div className="flex flex-col gap-y-6">
             {description.map((text, idx) => (
@@ -56,7 +66,7 @@ export const CardOptions = ({ lists, price, title, description, onClick }: ICard
           onClick={onClick}
         />
       </div>
-      <div className="lastItem h-full w-full rounded-[2px] p-5 sm:max-w-[305px]">
+      <div className="lastItem mb-2.5 h-full w-full rounded-[2px] p-5 sm:max-w-[305px]">
         <ul className="mb-auto flex h-full w-full max-w-[420px] flex-col gap-y-5 *:cursor-default">
           {lists.map((list, idx) => (
             <li key={`${title}_${idx}`} className="flex items-start gap-2.5 text-base">
@@ -71,7 +81,7 @@ export const CardOptions = ({ lists, price, title, description, onClick }: ICard
       <Button
         revers
         text="Записатись"
-        className="xl: max-w-[295px] sm:hidden sm:max-w-[216px]"
+        className="mx-auto max-w-[295px] sm:hidden sm:max-w-[216px]"
         onClick={onClick}
       />
     </div>
