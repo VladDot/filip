@@ -49,7 +49,7 @@ export const CardOptions = ({
           <h4 className="text-textBlue mb-5 flex flex-col text-[clamp(20px,_4vw,_32px)] leading-[120%] font-bold">
             {title}
 
-            {subTitle ? <span>{subTitle}</span> : null}
+            {subTitle ? <span className="text-amber-300">{subTitle}</span> : null}
           </h4>
           <div className="flex flex-col gap-y-6">
             {description.map((text, idx) => (
