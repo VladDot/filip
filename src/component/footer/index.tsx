@@ -52,7 +52,7 @@ export const Footer = ({}) => {
             <div className="flex flex-col">
               <p className="mb-2.5 cursor-default sm:text-end lg:mb-4">Ми в соцмережах</p>
 
-              <Social className="mb-[60px] sm:mb-9 lg:mb-[42px]" />
+              <Social className="mb-[60px] gap-x-5 sm:mb-9 lg:mb-[42px]" />
 
               <div className="flex gap-x-4 sm:mr-2.5 sm:justify-center lg:justify-end">
                 <div className="w-full max-w-[46px] lg:max-w-[72px]">
