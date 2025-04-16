@@ -9,11 +9,10 @@ import { Button } from '../button';
 import { getStyles } from './styles';
 
 interface IBurger {
-  setIsOpen: (value: boolean) => void;
   onClick: () => void;
 }
 
-export const Burger = ({ setIsOpen, onClick }: IBurger) => {
+export const Burger = ({ onClick }: IBurger) => {
   const ref = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const { burger, nav, navContent } = getStyles({ isActive });
@@ -34,11 +33,6 @@ export const Burger = ({ setIsOpen, onClick }: IBurger) => {
       document.body.style.paddingRight = '';
     };
   }, [isActive]);
-
-  const handleClick = () => {
-    setIsActive(!isActive);
-    setIsOpen(true);
-  };
 
   return (
     <>
@@ -81,7 +75,10 @@ export const Burger = ({ setIsOpen, onClick }: IBurger) => {
             text="Записатися на курс"
             revers
             className="sm:bg-blueBg max-w-[335px] sm:[&_*]:fill-white sm:[&_*]:text-white"
-            onClick={handleClick}
+            onClick={() => {
+              setIsActive(!isActive);
+              scrollToSection('#learning_options');
+            }}
           />
         </div>
       </nav>

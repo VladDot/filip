@@ -70,7 +70,7 @@ export const Header = () => {
               </ul>
               <Button
                 text="Записатися на курс"
-                onClick={() => setIsOpen(true)}
+                onClick={() => scrollToSection('#learning_options')}
                 className="[&_div_*]:fill-blueBg [&_p_*]:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_p_*]:font-semibold"
               />
             </div>
@@ -80,8 +80,7 @@ export const Header = () => {
         {width < 1025 && (
           <div className="flex w-full items-center justify-between min-[1025px]:hidden">
             <Image src={Logo} alt="logo" className="z-[999]" />
-            <Burger setIsOpen={() => setIsOpen(true)} onClick={handleFreeLessonClick} />
-            <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Burger onClick={handleFreeLessonClick} />
           </div>
         )}
       </div>

@@ -68,7 +68,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
 
       const updatedFormData = {
         ...formData,
-        action: 'groupTraining',
+        action: 'telegramTraining',
       };
 
       fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
@@ -131,7 +131,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
             <p className="text-sm text-red-500">Будь ласка, заповніть усі поля</p>
           )}
           <Button
-            text="Подати заявку"
+            text="Записатися на курс"
             className="border-btnBorder justify-normal gap-6 text-center"
           />
         </form>
