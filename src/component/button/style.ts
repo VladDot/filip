@@ -1,7 +1,7 @@
 import { cn } from '@/utilities';
 interface IStyleProps {
-  revers?: boolean;
   rotate?: boolean;
+  revers?: boolean;
   className?: string;
 }
 
