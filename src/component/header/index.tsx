@@ -71,7 +71,7 @@ export const Header = () => {
               <Button
                 text="Записатися на курс"
                 onClick={() => scrollToSection('#learning_options')}
-                className="[&_div_*]:fill-blueBg [&_p_*]:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_p_*]:font-semibold"
+                className="text-textBlue [&_.ui-btn-text]:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_span_*]:font-semibold"
               />
             </div>
             <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />

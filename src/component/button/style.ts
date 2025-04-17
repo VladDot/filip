@@ -11,13 +11,16 @@ export const getStyle = ({ revers, rotate, className }: IStyleProps) => ({
     revers && 'pl-5 pr-3 flex-row-reverse',
     className
   ),
-  arrowContainer: cn('max-w-6 overflow-hidden flex items-center', rotate && 'rotate-90'),
+  arrowContainer: cn(
+    'max-w-6 overflow-hidden flex items-center text-inherit',
+    rotate && 'rotate-90'
+  ),
   arrowImg: cn(
-    'min-w-6 ease-in-out duration-300 [&_*]:fill-white sm:[&_*]:fill-black group-hover/item:[&_*]:fill-white',
+    'min-w-6 ease-in-out duration-300 group-hover/item:text-white',
     rotate ? '-translate-x-6 group-hover/item:translate-x-0' : 'sm:group-hover/item:-translate-x-6'
   ),
   textContainer: 'font-normal overflow-hidden h-[22px] text-[18px]',
   textStyle: cn(
-    'block text-[18px] text-white sm:text-darkText -translate-y-[2px] sm:group-hover/item:text-white sm:group-hover/item:-translate-y-[30px] ease-in-out duration-300'
+    'block text-[18px] text-white sm:text-darkText -translate-y-[2px] sm:group-hover/item:!text-white sm:group-hover/item:-translate-y-[30px] ease-in-out duration-300 ui-btn-text'
   ),
 });
