@@ -45,7 +45,7 @@ export const Header = () => {
         {width > 1024 && (
           <div className="hidden w-full justify-between min-[1025px]:flex">
             <Image src={Logo} alt="logo" className="z-[999]" />
-            <div className="flex items-center gap-7">
+            <nav className="flex items-center gap-7">
               <ul className="mb-[50px] flex flex-col gap-5 text-xl md:mb-0 md:flex-row">
                 <li
                   onClick={handleFreeLessonClick}
@@ -73,7 +73,7 @@ export const Header = () => {
                 onClick={() => scrollToSection('#learning_options')}
                 className="text-textBlue [&_.ui-btn-text]:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_span_*]:font-semibold"
               />
-            </div>
+            </nav>
             <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         )}
