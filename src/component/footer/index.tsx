@@ -10,7 +10,7 @@ import { Social } from '../social';
 
 export const Footer = ({}) => {
   return (
-    <section id="footer" className="relative z-[20] bg-white">
+    <footer id="footer" className="relative z-[20] bg-white">
       <div className="mx-auto w-full max-w-[1440px] px-5 pt-[60px] pb-5 lg:px-[60px]">
         <div className="mb-[30px] flex flex-col md:flex-row md:justify-between">
           <div className="mb-10 inline-block w-full max-w-[168px] lg:max-w-[249px]">
@@ -72,6 +72,6 @@ export const Footer = ({}) => {
           <Link href={'#'}>Умови користування та Політика конфіденційності</Link>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
