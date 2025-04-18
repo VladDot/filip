@@ -68,7 +68,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
 
       const updatedFormData = {
         ...formData,
-        action: 'groupTraining',
+        action: 'telegramTraining',
       };
 
       fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
@@ -101,7 +101,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
     <Modal isOpen={isOpen} setClose={() => setIsOpen(false)}>
       <div ref={ref} className="max-w-[325px] space-y-4 rounded-[2px] bg-gray-100 p-6 shadow">
         <h3 className="mb-6 text-xl leading-[110%] font-medium">
-          Залиште свої дані, щоб наш консультант міг зв’язатися з вами
+          Для запису на курс залиште ваші дані
         </h3>
         <form onSubmit={handleFormSubmit} className="flex flex-col gap-y-[10px]">
           <Input
@@ -131,7 +131,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
             <p className="text-sm text-red-500">Будь ласка, заповніть усі поля</p>
           )}
           <Button
-            text="Подати заявку"
+            text="Записатися на курс"
             className="border-btnBorder justify-normal gap-6 text-center"
           />
         </form>

@@ -4,7 +4,7 @@ import { CardsCareer } from './cards-career';
 
 export const CareerDevelopment = () => {
   return (
-    <div className="xxl:mb-[130px] relative mb-20 md:mb-[100px]">
+    <section className="xxl:mb-[130px] relative mb-20 md:mb-[100px]">
       <div className="m-auto mb-[30px] text-center sm:max-w-[650px] md:mb-[60px]">
         <Title
           text="Як розвивається Corezoid-спеціаліст"
@@ -31,6 +31,6 @@ export const CareerDevelopment = () => {
       <div className="[&>div>div:first-child>div]:text-textBlue flex justify-center [&>div>div:first-child>div]:bg-white [&>div>div:first-child>h3]:text-black">
         <CardsCareer cardCareer={cardCareer} />
       </div>
-    </div>
+    </section>
   );
 };
