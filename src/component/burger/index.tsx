@@ -74,7 +74,7 @@ export const Burger = ({ onClick }: IBurger) => {
           <Button
             text="Записатися на курс"
             revers
-            className="sm:bg-blueBg max-w-[335px] sm:[&_*]:fill-white sm:[&_*]:text-white"
+            className="sm:bg-blueBg max-w-[335px] *:text-white"
             onClick={() => {
               setIsActive(!isActive);
               scrollToSection('#learning_options');

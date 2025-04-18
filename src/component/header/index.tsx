@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 import { Logo } from '@/assets/img';
-import { useWindowWidth } from '@/hooks';
 import { scrollToSection } from '@/helpers';
+import { useWindowWidth } from '@/hooks';
 
 import { Burger } from '../burger';
 import { Button } from '../button';
@@ -71,7 +71,7 @@ export const Header = () => {
               <Button
                 text="Записатися на курс"
                 onClick={() => scrollToSection('#learning_options')}
-                className="text-textBlue [&_.ui-btn-text]:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_span_*]:font-semibold"
+                className="*:text-textBlue w-[220px] justify-between pr-2.5 pl-1 [&_span_*]:font-semibold"
               />
             </nav>
             <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
