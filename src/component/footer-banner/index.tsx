@@ -58,7 +58,7 @@ export const FooterBanner = () => {
         />
         <Button
           text="Переглянути урок"
-          className="w-[216px] text-black"
+          className="w-[216px]"
           revers
           onClick={handleFreeLessonClick}
         />
