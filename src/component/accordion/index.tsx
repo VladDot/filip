@@ -12,7 +12,7 @@ export const Accordion = ({ title, isOpen, onClick, description }: IAccordionPro
 
         <div className={styles.arrowWrapper}>
           <span className={`${styles.arrow} ${isOpen ? 'rotate-270' : ''}`}>
-            <Arrow className="" />
+            <Arrow />
           </span>
         </div>
       </div>
