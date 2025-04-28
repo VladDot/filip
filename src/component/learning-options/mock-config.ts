@@ -1,14 +1,16 @@
 interface IMockCardsProps {
   price: string;
   title: string;
+  action: string;
+  lists: string[];
   subTitle?: string;
   description: string[];
-  lists: string[];
 }
 
 export const mockCards: IMockCardsProps[] = [
   {
     price: '₴ 5 500',
+    action: 'telegramTraining',
     title: 'Курс у Telegram',
     subTitle: '(рекомендуємо)',
     description: ['Проходьте повноцінне навчання прямо у чат-боті Telegram.'],
@@ -24,6 +26,7 @@ export const mockCards: IMockCardsProps[] = [
   },
   {
     price: '₴ 8 500',
+    action: 'groupTraining',
     title: 'Групове навчання онлайн',
     description: [
       'Навчання в міні-групі від 5 осіб із живими заняттями у Zoom.',

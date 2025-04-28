@@ -9,6 +9,7 @@ import { FeedbackForm } from '../feedback-form';
 
 export const LearningOptions = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [actionType, setActionType] = useState<string | null>(null);
 
   return (
     <section id="learning_options" className="mb-20 px-5 sm:mb-24 md:mb-28 lg:mb-40">
@@ -17,10 +18,15 @@ export const LearningOptions = ({}) => {
       </div>
       <div className="even:[&_div_.lastItem]:last:bg-brightBg relative z-10 m-auto flex flex-wrap items-stretch gap-5 sm:w-fit xl:flex-row [&_div_.lastItem]:odd:bg-white">
         {mockCards.map((card, index) => (
-          <CardOptions key={`${card.title}_${index}`} {...card} onClick={() => setIsOpen(true)} />
+          <CardOptions
+            {...card}
+            setActionType={setActionType}
+            key={`${card.title}_${index}`}
+            onClick={() => setIsOpen(true)}
+          />
         ))}
       </div>
-      <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
+      <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} actionType={actionType} />
     </section>
   );
 };

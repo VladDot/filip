@@ -7,10 +7,12 @@ interface ISVGDoneProps {
 interface ICardOptionsProps {
   price: string;
   title: string;
-  subTitle?: string;
   lists: string[];
-  description: string[];
+  subTitle?: string;
   onClick: () => void;
+  description: string[];
+  action: string | null;
+  setActionType: (type: string | null) => void;
 }
 
 const SVGDone = ({ className }: ISVGDoneProps) => {
@@ -37,10 +39,17 @@ export const CardOptions = ({
   lists,
   price,
   title,
+  action,
+  onClick,
   subTitle,
   description,
-  onClick,
+  setActionType,
 }: ICardOptionsProps) => {
+  const handleClick = () => {
+    setActionType(action);
+    onClick();
+  };
+
   return (
     <div className="rounder-[2px] odd:bg-brightBg even:[&_.lastItem]:bg-brightBg border-borderBg mx-auto flex w-fit flex-col gap-x-5 border-[1px] p-2.5 even:bg-white sm:flex-row sm:items-stretch odd:[&_.lastItem]:bg-white">
       <div className="rounder-[2px] flex h-full w-full flex-col justify-between py-5 pl-5 sm:max-w-[305px]">
@@ -63,7 +72,7 @@ export const CardOptions = ({
           revers
           text="Записатись"
           className="hidden max-w-[295px] sm:flex sm:max-w-[216px]"
-          onClick={onClick}
+          onClick={handleClick}
         />
       </div>
       <div className="lastItem mb-2.5 h-full w-full rounded-[2px] p-5 sm:max-w-[305px]">
@@ -82,7 +91,7 @@ export const CardOptions = ({
         revers
         text="Записатись"
         className="mx-auto max-w-[295px] sm:hidden sm:max-w-[216px]"
-        onClick={onClick}
+        onClick={handleClick}
       />
     </div>
   );

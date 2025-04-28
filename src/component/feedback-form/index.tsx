@@ -9,10 +9,11 @@ import { Button } from '../button';
 
 interface IFeedbackFormProps {
   isOpen: boolean;
+  actionType: string | null;
   setIsOpen: (value: boolean) => void;
 }
 
-export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
+export const FeedbackForm = ({ isOpen, setIsOpen, actionType }: IFeedbackFormProps) => {
   const [form, setForm] = useState({
     email: '',
     lastName: '',
@@ -68,7 +69,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen }: IFeedbackFormProps) => {
 
       const updatedFormData = {
         ...formData,
-        action: 'telegramTraining',
+        action: actionType,
       };
 
       fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
