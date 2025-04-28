@@ -9,7 +9,7 @@ import { Button } from '../button';
 
 interface IFeedbackFormProps {
   isOpen: boolean;
-  actionType: string | null;
+  actionType?: string | null;
   setIsOpen: (value: boolean) => void;
 }
 
