@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { scrollToSection } from '@/helpers';
 import { LogoHorizontal, Master, Visa } from '@/assets/img';
@@ -68,8 +68,13 @@ export const Footer = ({}) => {
         </div>
 
         <div className="*:text-textBlue flex flex-col gap-y-2.5 *:text-[12px] sm:items-center md:flex-row md:items-baseline md:justify-between">
-          <Link href={'#'}>© 2025. Filipp Academy. Всі права захищено.</Link>
-          <Link href={'#'}>Умови користування та Політика конфіденційності</Link>
+          <Link href={'/terms'} target="_blank">
+            © 2025. Filipp Academy. Всі права захищено.
+          </Link>
+
+          <Link href={'/privacy'} target="_blank">
+            Умови користування та Політика конфіденційності
+          </Link>
         </div>
       </div>
     </footer>
