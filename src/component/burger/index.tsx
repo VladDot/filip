@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { useOutsideClick } from '@/hooks';
 import { scrollToSection } from '@/helpers';
@@ -18,21 +18,6 @@ export const Burger = ({ onClick }: IBurger) => {
   const { burger, nav, navContent } = getStyles({ isActive });
 
   useOutsideClick(() => setIsActive(false), ref);
-
-  useEffect(() => {
-    if (isActive) {
-      document.body.style.overflow = 'hidden ';
-      document.body.style.paddingRight = '8px';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    };
-  }, [isActive]);
 
   return (
     <>

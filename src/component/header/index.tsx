@@ -42,8 +42,8 @@ export const Header = () => {
       <div className="absolute top-0 left-0 z-[-1] h-full w-full" />
 
       <div className="relative z-[2] mx-auto flex w-full max-w-[1440px] items-center justify-between gap-8">
-        {width > 1024 && (
-          <div className="hidden w-full justify-between min-[1025px]:flex">
+        {width >= 1024 && (
+          <div className="hidden w-full justify-between min-[1024px]:flex">
             <Image src={Logo} alt="logo" className="z-[999]" />
             <nav className="flex items-center gap-7">
               <ul className="mb-[50px] flex flex-col gap-5 text-xl md:mb-0 md:flex-row">
@@ -77,8 +77,8 @@ export const Header = () => {
             <FeedbackForm isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         )}
-        {width < 1025 && (
-          <div className="flex w-full items-center justify-between min-[1025px]:hidden">
+        {width < 1024 && (
+          <div className="flex w-full items-center justify-between min-[1024px]:hidden">
             <Image src={Logo} alt="logo" className="z-[999]" />
             <Burger onClick={handleFreeLessonClick} />
           </div>
