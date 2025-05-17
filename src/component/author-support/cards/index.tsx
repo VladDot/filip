@@ -19,7 +19,7 @@ export const Cards = ({ support }: ICardsProps) => {
   return (
     <>
       {width >= 640 && (
-        <div className="xxl:flex-row xxl:items-start xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>ul>span]:-left-30 relative z-[4] flex w-full items-center gap-5 gap-y-5 [&>*:last-child>*:first-child>ul>span]:top-[25%]">
+        <div className="xxl:flex-row xxl:items-start xxl:[&>div:last-child]:ml-auto xxl:[&>*:first-child>*:last-child>div>span]:-left-30 relative z-[4] flex w-full items-center gap-5 gap-y-5 [&>*:last-child>*:first-child>div>span]:top-[25%]">
           <div className="xxl:gap-[158px] xxl:[&>div:last-child]:ml-[111px] flex flex-col items-center gap-y-3">
             <Card text={support[0].text} title={support[0].title} decor={support[0].decor} />
 
@@ -66,7 +66,7 @@ export const Cards = ({ support }: ICardsProps) => {
       )}
 
       {width < 640 && (
-        <div className="relative z-[4] flex w-full flex-col gap-[30px] overflow-hidden pt-5 [&>*:last-child>*:first-child>ul>span]:top-[35px] [&>*:last-child>*:first-child>ul>span]:left-[10px]">
+        <div className="relative z-[4] flex w-full flex-col gap-[30px] overflow-hidden pt-5 [&>*:last-child>*:first-child>div>span]:top-[15px] [&>*:last-child>*:first-child>div>span]:left-[10px]">
           {support
             .filter((_, index) => index === 0)
             .map(({ title, decor, text }, idx) => (
@@ -83,7 +83,7 @@ export const Cards = ({ support }: ICardsProps) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-y-[30px] [&>div:first-child>ul]:list-disc [&>div:first-child>ul]:pl-7">
+          <div className="flex flex-col gap-y-[30px] [&>div:first-child>div>ul]:list-disc [&>div:first-child>div>ul]:pl-7">
             {support
               .filter((_, index) => index !== 0)
               .map(({ title, decor, text }, idx) => (

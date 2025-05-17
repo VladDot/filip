@@ -35,7 +35,9 @@ export const CourseProgram = () => {
             />
             <div className="flex items-end justify-center gap-3">
               <Image src={Time} alt="time" className="w-8" />
-              <span className="text-textBlue cursor-default font-semibold">11 занять</span>
+              <span className="text-textBlue cursor-default text-[20px] font-semibold">
+                11 занять
+              </span>
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react';
 
+import { useWindowWidth } from '@/hooks';
+
 import { Portal } from '../portal';
 import { ChildrenProps } from '../types';
 
@@ -11,8 +13,10 @@ interface IModalProps {
 }
 
 export const Modal = ({ isOpen, children }: ChildrenProps<IModalProps>) => {
+  const width = useWindowWidth();
+
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && width >= 1024) {
       document.body.style.overflow = 'hidden';
       document.body.style.paddingRight = '8px';
     }
@@ -21,7 +25,7 @@ export const Modal = ({ isOpen, children }: ChildrenProps<IModalProps>) => {
       document.body.style.removeProperty('overflow');
       document.body.style.paddingRight = '';
     };
-  }, [isOpen]);
+  }, [isOpen, width]);
 
   return (
     <Portal opened={isOpen}>

@@ -68,13 +68,16 @@ export const Footer = ({}) => {
         </div>
 
         <div className="*:text-textBlue flex flex-col gap-y-2.5 *:text-[12px] sm:items-center md:flex-row md:items-baseline md:justify-between">
-          <Link href={'/terms'} target="_blank">
-            © 2025. Filipp Academy. Всі права захищено.
-          </Link>
-
-          <Link href={'/privacy'} target="_blank">
-            Умови користування та Політика конфіденційності
-          </Link>
+          <span className="cursor-default">© 2025. Filipp Academy. Всі права захищено.</span>
+          <p>
+            <Link href={'/terms'} target="_blank" className="hover:underline">
+              Умови користування
+            </Link>{' '}
+            та{' '}
+            <Link href={'/privacy'} target="_blank" className="hover:underline">
+              Політика конфіденційності
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
