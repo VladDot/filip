@@ -51,7 +51,7 @@ export const Header = () => {
                   onClick={handleFreeLessonClick}
                   className="hover:text-textBlue cursor-pointer transition-all duration-150 ease-in-out"
                 >
-                  Безкоштовний відео-урок
+                  Безкоштовний відеоурок
                 </li>
 
                 <li
