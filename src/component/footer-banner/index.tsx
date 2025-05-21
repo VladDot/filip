@@ -48,12 +48,12 @@ export const FooterBanner = () => {
         <div className="absolute top-2/5 right-0 z-[4] h-[clamp(300px,50vw,1000px)] w-[clamp(400px,50vw,1382px)] translate-x-[60%] -translate-y-[20%] rounded-full bg-[#027DFA80] blur-[80px] md:hidden" />
 
         <Title
-          text="Подивись безкоштовний відео-урок"
+          text="Подивися безкоштовний відеоурок"
           className="m-0 text-center text-[clamp(36px,_4vw,_64px)] leading-[100%] font-semibold lg:px-6 xl:px-0"
         />
 
         <SubTitle
-          text="Дізнайся, що таке Corezoid, як він працює та де застосовується — так тобі буде простіше зрозуміти, чи підходить курс саме тобі"
+          text="Дізнайся, що таке Corezoid, як він працює та де застосовується. Переконайся, що цей курс буде тобі корисним"
           className="m-0 mb-[30px] text-center text-[clamp(18px,_4vw,_24px)] lg:mb-[40px] lg:px-2"
         />
         <Button

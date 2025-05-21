@@ -30,7 +30,7 @@ export const CourseProgram = () => {
         <div className="w-full">
           <div className="md:flex md:gap-36">
             <Title
-              text="Програма курса "
+              text="Програма курсу"
               className="m-auto mb-2 leading-[100%] md:m-0 md:mb-0 md:flex md:w-full md:flex-1 md:justify-end"
             />
             <div className="flex items-end justify-center gap-3">
@@ -56,11 +56,11 @@ export const CourseProgram = () => {
 
         <div className="bg-blueBg/10 border-blueBorder/20 relative z-[4] flex flex-col gap-y-5 border p-5">
           <h3 className="text-[clamp(22px,_4vw,_32px)] font-semibold">
-            Після завершення курсу ти матимеш можливість отримати сертифікат.
+            Після завершення курсу ти матимеш можливість отримати сертифікат
           </h3>
 
           <p className="text-lg font-medium md:text-xl">
-            Сертифікат підтвердить вашу кваліфікацію та стане вагомим доповненням до резюме.
+            Сертифікат підтвердить твою кваліфікацію та стане вагомим доповненням до резюме.
           </p>
         </div>
       </div>

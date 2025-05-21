@@ -6,7 +6,7 @@ export const LearningProcess = () => {
   return (
     <section className="relative z-[4] mb-20 px-5 lg:mb-40">
       <div className="relative z-[4] m-auto mb-[30px] max-w-[651px] text-center sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
-        <Title text="Як виглядає процес навчання?" />
+        <Title text="Який вигляд має процес навчання" />
       </div>
 
       <div className="relative z-[4] flex flex-wrap justify-center gap-y-3 md:gap-y-0 lg:flex-nowrap">
