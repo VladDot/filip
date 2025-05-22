@@ -140,12 +140,12 @@ export const FeedbackForm = ({ isOpen, setIsOpen, actionType }: IFeedbackFormPro
             type="email"
             value={form.email}
             error={error.email}
-            className="mb-[30px]"
+            className="mb-3"
             onChange={handleChange}
             placeholder="Введіть свою пошту"
           />
 
-          <label className="flex items-start gap-2 text-sm">
+          <label className="mb-3 flex items-start gap-2 text-sm">
             <input
               type="checkbox"
               checked={isAgreed}

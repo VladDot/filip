@@ -70,13 +70,13 @@ export const CardOptions = ({
         </div>
         <Button
           revers
-          text="Записатись"
+          text="Записатися"
           className="hidden max-w-[295px] sm:flex sm:max-w-[216px]"
           onClick={handleClick}
         />
       </div>
       <div className="lastItem mb-2.5 h-full w-full rounded-[2px] p-5 sm:max-w-[305px]">
-        <ul className="mb-auto flex h-full w-full max-w-[420px] flex-col gap-y-5 *:cursor-default">
+        <ul className="mb-auto flex h-full w-full max-w-[420px] flex-col gap-y-5 pr-1 *:cursor-default">
           {lists.map((list, idx) => (
             <li key={`${title}_${idx}`} className="flex items-start gap-2.5 text-base">
               <div className="w-full max-w-[18px] pt-1">
@@ -89,7 +89,7 @@ export const CardOptions = ({
       </div>
       <Button
         revers
-        text="Записатись"
+        text="Записатися"
         className="mx-auto max-w-[295px] sm:hidden sm:max-w-[216px]"
         onClick={handleClick}
       />
