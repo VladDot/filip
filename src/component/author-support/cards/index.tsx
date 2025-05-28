@@ -15,6 +15,7 @@ interface ICardsProps {
 
 export const Cards = ({ support }: ICardsProps) => {
   const width = useWindowWidth();
+  const link = 'https://t.me/SergeyPC';
 
   return (
     <>
@@ -32,9 +33,14 @@ export const Cards = ({ support }: ICardsProps) => {
                 />
                 <div className="flex w-fit flex-col">
                   <span>Serhii Filipp</span>
-                  <Link href={''} className="text-textBlue">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textBlue"
+                  >
                     @SergeyPC
-                  </Link>
+                  </a>
                 </div>
               </div>
             )}
@@ -49,9 +55,9 @@ export const Cards = ({ support }: ICardsProps) => {
               />
               <div className="flex w-fit flex-col">
                 <span>Serhii Filipp</span>
-                <Link href={''} className="text-textBlue">
+                <a href={link} target="_blank" rel="noopener noreferrer" className="text-textBlue">
                   @SergeyPC
-                </Link>
+                </a>
               </div>
             </div>
           )}
@@ -77,9 +83,9 @@ export const Cards = ({ support }: ICardsProps) => {
               <Image src={Filipp} alt="filipp" className="mb-1 rotate-[4.35deg] rounded-[2px]" />
               <div className="flex flex-col">
                 <span>Serhii Filipp</span>
-                <Link href={''} className="text-textBlue">
+                <a href={link} target="_blank" rel="noopener noreferrer" className="text-textBlue">
                   @SergeyPC
-                </Link>
+                </a>
               </div>
             </div>
           </div>
