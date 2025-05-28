@@ -1,3 +1,5 @@
+'use client';
+
 import { Title } from '../title';
 import { Button } from '../button';
 import { SubTitle } from '../sub-title';
@@ -8,19 +10,27 @@ export const FooterBanner = () => {
       action: 'freeLesson',
     };
 
-    try {
-      const response = await fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestData),
-      }).then((response) => response.json());
+    const newWindow = window.open('', '_blank');
 
-      window.open(response.tg_link, '_blank');
-    } catch (error) {
-      console.error('Error:', error);
-    }
+    await fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (newWindow) {
+          newWindow.location.href = data.tg_link;
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        if (newWindow) {
+          newWindow.close();
+        }
+      });
   };
 
   return (
