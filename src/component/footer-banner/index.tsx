@@ -3,25 +3,24 @@ import { Button } from '../button';
 import { SubTitle } from '../sub-title';
 
 export const FooterBanner = () => {
-  const handleFreeLessonClick = () => {
+  const handleFreeLessonClick = async () => {
     const requestData = {
       action: 'freeLesson',
     };
-    fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data);
-        window.open(data.tg_link, '_blank');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+
+    try {
+      const response = await fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      }).then((response) => response.json());
+
+      window.open(response.tg_link, '_blank');
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
