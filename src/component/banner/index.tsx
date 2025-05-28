@@ -23,7 +23,7 @@ export const Banner = () => {
             muted
             autoPlay
             playsInline
-            preload="none"
+            preload="auto"
             src="/grid.mp4"
             className="pointer-events-none h-[622px] w-full object-cover select-none md:h-[808px]"
           />

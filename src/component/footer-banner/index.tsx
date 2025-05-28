@@ -48,7 +48,7 @@ export const FooterBanner = () => {
             muted
             autoPlay
             playsInline
-            preload="none"
+            preload="auto"
             src="/grid.mp4"
             className="pointer-events-none h-[450px] w-full object-cover select-none"
           />

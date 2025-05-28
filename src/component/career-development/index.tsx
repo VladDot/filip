@@ -23,7 +23,7 @@ export const CareerDevelopment = () => {
             muted
             autoPlay
             playsInline
-            preload="none"
+            preload="auto"
             src="/animSquare.mp4"
             className="xxl:object-cover pointer-events-none h-full w-full rotate-90 select-none md:rotate-0"
           />
