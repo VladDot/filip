@@ -25,6 +25,7 @@ export const Banner = () => {
             playsInline
             preload="auto"
             src="/grid.mp4"
+            poster="/gridWebP.webp"
             className="pointer-events-none h-[622px] w-full object-cover select-none md:h-[808px]"
           />
         </div>
