@@ -16,13 +16,15 @@ export const CareerDevelopment = () => {
 
       <div className="xxl:-translate-x-[60%] xxl:blur-[150px] xxl:-translate-y-[40%] absolute top-2/5 left-0 z-[4] h-[clamp(200px,50vw,1000px)] w-[clamp(200px,50vw,1382px)] -translate-x-[70%] -translate-y-[50%] rounded-full bg-[#027DFA80] blur-[100px] md:-translate-y-[30%] lg:-translate-x-[60%] lg:-translate-y-[20%] lg:blur-[150px]" />
 
-      <div className="absolute inset-0 z-[5] flex items-center justify-center overflow-hidden mix-blend-plus-lighter">
-        <div className="xxl:scale-100 absolute top-[60px] left-1/2 z-[2] h-[1000px] w-[1200px] max-w-[1400px] -translate-x-1/2 sm:top-[40px] md:top-1/2 md:h-full md:w-full md:-translate-y-2/5 md:scale-125">
+      <div className="pointer-events-none absolute inset-0 z-[5] flex items-center justify-center overflow-hidden mix-blend-plus-lighter select-none">
+        <div className="xxl:scale-100 pointer-events-none absolute top-[60px] left-1/2 z-[2] h-[1000px] w-[1200px] max-w-[1400px] -translate-x-1/2 select-none sm:top-[40px] md:top-1/2 md:h-full md:w-full md:-translate-y-2/5 md:scale-125">
           <video
-            src="/animSquare.mp4"
-            autoPlay
-            muted
             loop
+            muted
+            autoPlay
+            playsInline
+            preload="none"
+            src="/animSquare.mp4"
             className="xxl:object-cover pointer-events-none h-full w-full rotate-90 select-none md:rotate-0"
           />
         </div>
