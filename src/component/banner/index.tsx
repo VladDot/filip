@@ -16,13 +16,15 @@ export const Banner = () => {
       <div className="absolute bottom-0 left-0 z-[2] h-[20%] w-full translate-y-1/2 rounded-full bg-white blur-[40px]" />
       <div className="absolute top-0 left-0 z-[2] h-[25%] w-full -translate-y-1/2 rounded-full bg-white blur-[40px]" />
 
-      <div className="absolute inset-0 z-[5] flex items-center justify-center mix-blend-plus-lighter">
-        <div className="absolute top-0 z-[2] w-full rotate-180">
+      <div className="pointer-events-none absolute inset-0 z-[5] flex items-center justify-center mix-blend-plus-lighter select-none">
+        <div className="pointer-events-none absolute top-0 z-[2] w-full rotate-180 select-none">
           <video
-            src="/grid.mp4"
-            autoPlay
-            muted
             loop
+            muted
+            autoPlay
+            playsInline
+            preload="none"
+            src="/grid.mp4"
             className="pointer-events-none h-[622px] w-full object-cover select-none md:h-[808px]"
           />
         </div>
