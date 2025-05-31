@@ -1,8 +1,7 @@
 import Image from 'next/image';
 
+import { ICardUseful } from '@/mock-data';
 import { Title } from '@/component/title';
-
-import { ICardUseful } from '../../mock';
 
 export const CardUseful = ({ text, img, title }: ICardUseful) => {
   return (

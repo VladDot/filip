@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 
+import { mockCards } from '@/mock-data';
+
 import { Title } from '../title';
-import { mockCards } from './mock-config';
 import { CardOptions } from './card-options';
 import { FeedbackForm } from '../feedback-form';
 

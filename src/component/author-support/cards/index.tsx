@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 import { Filipp } from '@/assets/img';
 import { useWindowWidth } from '@/hooks';
+import { ISupport, socialContact } from '@/mock-data';
 
 import { Card } from './card';
-import { ISupport } from '../mock';
 
 interface ICardsProps {
   support: ISupport[];
@@ -14,7 +14,6 @@ interface ICardsProps {
 
 export const Cards = ({ support }: ICardsProps) => {
   const width = useWindowWidth();
-  const link = 'https://t.me/SergeyPC';
 
   return (
     <>
@@ -33,7 +32,7 @@ export const Cards = ({ support }: ICardsProps) => {
                 <div className="flex w-fit flex-col">
                   <span>Serhii Filipp</span>
                   <a
-                    href={link}
+                    href={socialContact.tg}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-textBlue"
@@ -54,7 +53,12 @@ export const Cards = ({ support }: ICardsProps) => {
               />
               <div className="flex w-fit flex-col">
                 <span>Serhii Filipp</span>
-                <a href={link} target="_blank" rel="noopener noreferrer" className="text-textBlue">
+                <a
+                  href={socialContact.tg}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-textBlue"
+                >
                   @SergeyPC
                 </a>
               </div>
@@ -82,7 +86,12 @@ export const Cards = ({ support }: ICardsProps) => {
               <Image src={Filipp} alt="filipp" className="mb-1 rotate-[4.35deg] rounded-[2px]" />
               <div className="flex flex-col">
                 <span>Serhii Filipp</span>
-                <a href={link} target="_blank" rel="noopener noreferrer" className="text-textBlue">
+                <a
+                  href={socialContact.tg}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-textBlue"
+                >
                   @SergeyPC
                 </a>
               </div>

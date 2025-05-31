@@ -1,6 +1,7 @@
+import { support } from '@/mock-data';
+
 import { Cards } from './cards';
 import { Title } from '../title';
-import { support } from './mock';
 
 export const AuthorSupport = () => {
   return (

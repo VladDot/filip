@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-import { Stick1, Stick2, Stick3, Stick4 } from '@/assets/img';
+import { Stick1, Stick2, Stick3, Stick4 } from '../assets/img';
 
 export interface ICardCareer {
   text: string;

@@ -1,5 +1,6 @@
+import { ICardCareer } from '@/mock-data';
+
 import { Card } from './card';
-import { ICardCareer } from '../mock';
 
 interface ICardsCareer {
   cardCareer: ICardCareer[];

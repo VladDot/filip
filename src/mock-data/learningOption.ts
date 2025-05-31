@@ -1,4 +1,4 @@
-interface IMockCardsProps {
+export interface IMockCardsProps {
   price: string;
   title: string;
   action: string;

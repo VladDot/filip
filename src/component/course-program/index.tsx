@@ -4,9 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { Time } from '@/assets/img';
+import { accordionsData } from '@/mock-data';
 
 import { Title } from '../title';
-import { accordionsData } from './mock';
 import { Accordion } from '../accordion';
 
 export const CourseProgram = () => {

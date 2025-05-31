@@ -1,4 +1,4 @@
-interface IAccordionsData {
+export interface IAccordionsData {
   title: string;
   text: string[];
 }

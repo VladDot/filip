@@ -1,6 +1,6 @@
 import { Title } from '@/component/title';
 
-import { ISupport } from '../../mock';
+import { ISupport } from '@/mock-data';
 
 export const Card = ({ decor, text, title }: ISupport) => {
   return (

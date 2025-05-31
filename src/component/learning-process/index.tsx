@@ -1,5 +1,6 @@
+import { cardLess } from '@/mock-data';
+
 import { Title } from '../title';
-import { cardLess } from './mock';
 import { CardsProcess } from './cards-process';
 
 export const LearningProcess = () => {

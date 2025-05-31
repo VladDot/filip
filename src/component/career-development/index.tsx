@@ -1,5 +1,6 @@
+import { cardCareer } from '@/mock-data';
+
 import { Title } from '../title';
-import { cardCareer } from './mock';
 import { CardsCareer } from './cards-career';
 
 export const CareerDevelopment = () => {

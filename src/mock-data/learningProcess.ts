@@ -1,4 +1,4 @@
-interface ICardLessProps {
+export interface ICardLessProps {
   title: string;
   content: string;
   subContent?: string;

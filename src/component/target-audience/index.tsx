@@ -1,5 +1,6 @@
+import { cardsUseful } from '@/mock-data';
+
 import { Title } from '../title';
-import { cardsUseful } from './mock';
 import { CardsUseful } from './cards-useful';
 
 export const TargetAudience = () => {

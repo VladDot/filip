@@ -1,4 +1,5 @@
-import { ICardUseful } from '../mock';
+import { ICardUseful } from '@/mock-data';
+
 import { CardUseful } from './card-useful';
 
 interface ICardsUseful {

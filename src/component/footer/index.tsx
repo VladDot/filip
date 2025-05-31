@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { scrollToSection } from '@/helpers';
-import { LogoHorizontal, Master, Visa } from '@/assets/img';
+import { socialContact } from '@/mock-data';
+import { Visa, Master, LogoHorizontal } from '@/assets/img';
 
 import { Social } from '../social';
 
@@ -40,12 +41,12 @@ export const Footer = ({}) => {
               </ul>
 
               <Link
-                href={'mailto:corezoidtraining@gmail.com'}
-                className="text-textBlue"
                 target="_blank"
+                className="text-textBlue"
                 rel="noopener noreferrer"
+                href={`mailto:${socialContact.email}`}
               >
-                corezoidtraining@gmail.com
+                {socialContact.email}
               </Link>
             </nav>
 
