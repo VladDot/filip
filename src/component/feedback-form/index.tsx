@@ -53,7 +53,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen, actionType }: IFeedbackFormPro
     }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const newError = {
@@ -88,7 +88,7 @@ export const FeedbackForm = ({ isOpen, setIsOpen, actionType }: IFeedbackFormPro
         action: actionType,
       };
 
-      fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+      await fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
