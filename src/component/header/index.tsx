@@ -16,11 +16,13 @@ export const Header = () => {
 
   const width = useWindowWidth();
 
-  const handleFreeLessonClick = () => {
+  const handleFreeLessonClick = async () => {
     const requestData = {
       action: 'freeLesson',
     };
-    fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
+    const newWindow = window.open('', '_blank');
+
+    await fetch('https://nuezowew9l.apigw.corezoid.com/getBotLink', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,11 +31,15 @@ export const Header = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Success:', data);
-        window.open(data.tg_link, '_blank');
+        if (newWindow) {
+          newWindow.location.href = data.tg_link;
+        }
       })
       .catch((error) => {
         console.error('Error:', error);
+        if (newWindow) {
+          newWindow.close();
+        }
       });
   };
 

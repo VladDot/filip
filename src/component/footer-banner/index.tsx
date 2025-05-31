@@ -27,9 +27,9 @@ export const FooterBanner = () => {
       })
       .catch((error) => {
         console.error('Error:', error);
-        if (newWindow) {
-          newWindow.close();
-        }
+          if (newWindow) {
+            newWindow.close();
+          }
       });
   };
 

@@ -587,10 +587,10 @@ export default function TermsOfUse() {
             <p>
               Адреса електронної пошти{' '}
               <Link
-                href={'mailto:corezoidtraining@gmail.com'}
-                className="text-textBlue"
                 target="_blank"
+                className="text-textBlue"
                 rel="noopener noreferrer"
+                href={'mailto:corezoidtraining@gmail.com'}
               >
                 corezoidtraining@gmail.com
               </Link>
